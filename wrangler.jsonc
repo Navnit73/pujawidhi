@@ -1,8 +1,11 @@
 {
-  // Cloudflare Pages, static assets only (no Functions/Workers).
-  // Deploy: npm run deploy
+  // Cloudflare Workers static assets (no Worker script). Serves the Next.js static export in ./out
+  // Deploy: npm run deploy  (or `npx wrangler deploy` from Cloudflare Workers Builds)
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "pujawidhi",
   "compatibility_date": "2026-11-01",
-  "pages_build_output_dir": "./out"
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
 }

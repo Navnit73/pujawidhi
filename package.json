@@ -12,8 +12,8 @@
     "build": "next build",
     "typecheck": "tsc --noEmit",
     "publish:pages": "tsx scripts/publish.ts",
-    "preview": "wrangler pages dev out",
-    "deploy": "npm run build && wrangler pages deploy out --project-name pujawidhi"
+    "preview": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
