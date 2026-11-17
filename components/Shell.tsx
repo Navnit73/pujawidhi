@@ -12,7 +12,6 @@ export function Shell({ lang, twinHref, children }: { lang: Lang; twinHref: stri
   const home = pathFor(lang);
   return (
     <>
-      <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-saffron focus:px-4 focus:py-2 focus:text-on-saffron">{t.skip}</a>
       <header className="no-print pointer-events-none sticky top-0 z-[60] px-3 pt-3 sm:px-4">
         <div data-nav-bar className="nav-float pointer-events-auto relative mx-auto flex max-w-6xl items-center gap-2 rounded-full py-2 pl-3 pr-2 sm:gap-3 sm:pl-4">
           <Link href={home} className="flex min-h-[44px] min-w-0 items-center gap-2 no-underline" aria-label={SITE_NAME}>
