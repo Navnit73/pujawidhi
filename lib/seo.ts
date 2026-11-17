@@ -14,13 +14,9 @@ export function seoTitle(title: string): string {
   return title.slice(0, 59).replace(/\s+\S*$/, "") + "…";
 }
 
-const ogImage = (lang: Lang, category?: string, slug?: string, title?: string) => {
-  const q = new URLSearchParams({ l: lang });
-  if (category) q.set("c", category);
-  if (slug) q.set("s", slug);
-  else if (title) q.set("t", title);
-  return `${SITE_URL}/og?${q.toString()}`;
-};
+/** Static OG cards are pre-rendered by scripts/build-static-assets.tsx. */
+const ogImage = (lang: Lang, category?: string, slug?: string) =>
+  `${SITE_URL}/og/${lang}/${category ? (slug ? `${category}/${slug}` : category) : "default"}.png`;
 
 function alternates(lang: Lang, category?: string, slug?: string): Metadata["alternates"] {
   const self = pathFor(lang, category, slug);
@@ -36,7 +32,7 @@ function alternates(lang: Lang, category?: string, slug?: string): Metadata["alt
 
 function build(lang: Lang, o: { title: string; description: string; category?: string; slug?: string; index: boolean; ogTitle?: string; type?: "article" | "website" }): Metadata {
   const url = absUrl(pathFor(lang, o.category, o.slug));
-  const image = ogImage(lang, o.category, o.slug, o.ogTitle);
+  const image = ogImage(lang, o.category, o.slug);
   return {
     title: { absolute: seoTitle(o.title) },
     description: o.description,
@@ -71,7 +67,7 @@ export const simpleMetadata = (lang: Lang, o: { title: string; description: stri
   build(lang, { title: o.title, description: o.description, slug: o.slug, index: o.index ?? true });
 
 /* ---------- JSON-LD ---------- */
-export const organizationLd = () => ({ "@type": "Organization", "@id": `${SITE_URL}/#org`, name: SITE_NAME, url: SITE_URL, logo: `${SITE_URL}/icons/512` });
+export const organizationLd = () => ({ "@type": "Organization", "@id": `${SITE_URL}/#org`, name: SITE_NAME, url: SITE_URL, logo: `${SITE_URL}/icons/512.png` });
 
 export function websiteLd(lang: Lang) {
   return {

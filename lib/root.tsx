@@ -9,7 +9,7 @@ export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: SITE_NAME,
   manifest: "/manifest.webmanifest",
-  icons: { icon: "/icon.svg", apple: "/icons/180" },
+  icons: { icon: "/icon.svg", apple: "/icons/180.png" },
   appleWebApp: { capable: true, title: SITE_NAME, statusBarStyle: "default" },
   formatDetection: { telephone: false },
 };

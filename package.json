@@ -6,13 +6,14 @@
     "seed": "tsx scripts/seed-content.ts",
     "check:content": "tsx scripts/check-content.ts",
     "build:index": "tsx scripts/build-index.ts",
-    "predev": "tsx scripts/build-index.ts",
+    "predev": "tsx scripts/build-index.ts && tsx scripts/build-static-assets.tsx",
     "dev": "next dev",
-    "prebuild": "tsx scripts/check-content.ts && tsx scripts/build-index.ts",
+    "prebuild": "tsx scripts/check-content.ts && tsx scripts/build-index.ts && tsx scripts/build-static-assets.tsx",
     "build": "next build",
-    "start": "next start",
     "typecheck": "tsc --noEmit",
-    "publish:pages": "tsx scripts/publish.ts"
+    "publish:pages": "tsx scripts/publish.ts",
+    "preview": "wrangler pages dev out",
+    "deploy": "npm run build && wrangler pages deploy out --project-name pujawidhi"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -33,7 +34,8 @@
     "postcss": "^8.5.33",
     "tailwindcss": "^3.4.19",
     "tsx": "^4.23.15",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "wrangler": "^4.0.0"
   },
   "browserslist": [
     "chrome >= 100",

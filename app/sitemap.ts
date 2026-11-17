@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import type { MetadataRoute } from "next";
 import { CATEGORY_KEYS } from "@/lib/categories";
 import { allPages, isIndexable } from "@/lib/content";

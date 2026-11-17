@@ -1,0 +1,8 @@
+{
+  // Cloudflare Pages, static assets only (no Functions/Workers).
+  // Deploy: npm run deploy
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "pujawidhi",
+  "compatibility_date": "2026-11-01",
+  "pages_build_output_dir": "./out"
+}

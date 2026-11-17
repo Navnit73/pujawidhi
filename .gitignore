@@ -10,3 +10,10 @@ next-env.d.ts
 generated
 public/search-index.json
 public/data/lyrics.json
+
+# static-asset build output
+/out
+public/_redirects
+public/og
+public/icons
+.wrangler

@@ -27,16 +27,6 @@ function CitySelect({ lang, city, onChange }: { lang: Lang; city: string; onChan
   );
 }
 
-function useProvider(city: string, date: string) {
-  const [data, setData] = useState<ProviderResponse | null>(null);
-  useEffect(() => {
-    let live = true;
-    fetch(`/api/panchang?city=${city}&date=${date}`).then((r) => r.json()).then((j) => live && setData(j.panchang ?? null)).catch(() => {});
-    return () => { live = false; };
-  }, [city, date]);
-  return data;
-}
-
 function dayLabel(date: string, weekday: number, lang: Lang) {
   const [y, m, d] = date.split("-").map(Number);
   const mon = new Intl.DateTimeFormat(lang === "hi" ? "hi-IN" : "en-IN", { month: "long", timeZone: "UTC" }).format(new Date(Date.UTC(y, m - 1, d)));
@@ -75,10 +65,9 @@ export function PanchangStrip({ lang }: { lang: Lang }) {
     return () => clearInterval(id);
   }, []);
   const times = useMemo(() => (date ? solarTimes(city, date) : null), [city, date]);
-  const provider = useProvider(city, date ?? "");
-  // Provider (licensed) wins; otherwise tithi/nakshatra are computed locally at sunrise.
+  // Static hosting: tithi/nakshatra are computed locally at sunrise (no server provider).
   const local = useMemo(() => (times ? localPanchang(times.sunrise) : null), [times]);
-  const p = provider?.tithi || provider?.nakshatra ? provider : local;
+  const p = local;
   const hi = lang === "hi";
   const rahuNow = !!(times && now && now >= times.rahuStart.getTime() && now < times.rahuEnd.getTime());
   const dash = "–";
