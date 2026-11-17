@@ -35,10 +35,11 @@ export function match(items: Item[], q: string, limit = 8): Item[] {
   return scored.sort((a, b) => b[0] - a[0]).slice(0, limit).map((x) => x[1]);
 }
 
-export function SearchBox({ lang, placeholder, label, large = false }: { lang: Lang; placeholder: string; label: string; large?: boolean }) {
+export function SearchBox({ lang, placeholder, label, large = false, inline = false }: { lang: Lang; placeholder: string; label: string; large?: boolean; inline?: boolean }) {
   const [q, setQ] = useState("");
   const [index, setIndex] = useState<Index | null>(null);
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(-1);
   const id = useId();
   const box = useRef<HTMLDivElement>(null);
   const results = useMemo(() => (index ? match(index[lang], q) : []), [index, lang, q]);
@@ -53,19 +54,25 @@ export function SearchBox({ lang, placeholder, label, large = false }: { lang: L
     <div ref={box} className="relative w-full no-print" role="search">
       <label htmlFor={id} className="sr-only">{label}</label>
       <input
-        id={id} type="search" inputMode="search" autoComplete="off" value={q} placeholder={placeholder}
+        id={id} type="search" inputMode="search" enterKeyHint="search" autoComplete="off" value={q} placeholder={placeholder}
         onFocus={() => { setOpen(true); loadIndex().then(setIndex).catch(() => {}); }}
-        onChange={(e) => { setQ(e.target.value); setOpen(true); }}
-        onKeyDown={(e) => { if (e.key === "Escape") setOpen(false); if (e.key === "Enter" && results[0]) window.location.href = results[0].u; }}
+        onChange={(e) => { setQ(e.target.value); setOpen(true); setActive(-1); }}
+        role="combobox" aria-expanded={open && !!q.trim()} aria-controls={`${id}-list`} aria-autocomplete="list" aria-activedescendant={active >= 0 ? `${id}-opt-${active}` : undefined}
+        onKeyDown={(e) => {
+          if (e.key === "Escape") setOpen(false);
+          if (e.key === "ArrowDown") { e.preventDefault(); setOpen(true); setActive((a) => Math.min(a + 1, results.length - 1)); }
+          if (e.key === "ArrowUp") { e.preventDefault(); setActive((a) => Math.max(a - 1, -1)); }
+          if (e.key === "Enter") { const t = results[active >= 0 ? active : 0]; if (t) window.location.href = t.u; }
+        }}
         className={`w-full rounded-full border border-line bg-surface text-ink placeholder:text-muted px-5 ${large ? "min-h-[56px] text-lg" : "min-h-[44px]"}`}
       />
       {open && q.trim() && (
-        <ul className="absolute left-0 right-0 top-full z-50 mt-2 max-h-96 overflow-auto rounded-2xl border border-line bg-surface p-2 shadow-lg" aria-live="polite">
+        <ul className={`${inline ? "mt-2" : "absolute left-0 right-0 top-full z-50 mt-2 max-h-96 overflow-auto shadow-float"} rounded-2xl border border-line bg-surface p-2`} id={`${id}-list`} role="listbox">
           {index === null ? <li className="px-3 py-2 text-muted">…</li> : results.length === 0 ? (
             <li className="px-3 py-2 text-muted">{lang === "hi" ? "कोई परिणाम नहीं" : "Koi result nahi mila"}</li>
-          ) : results.map((r) => (
-            <li key={r.u}>
-              <Link href={r.u} className="block min-h-[44px] rounded-xl px-3 py-2 no-underline hover:bg-warm" onClick={() => setOpen(false)}>
+          ) : results.map((r, i) => (
+            <li key={r.u} role="option" id={`${id}-opt-${i}`} aria-selected={i === active}>
+              <Link href={r.u} tabIndex={-1} className={`block min-h-[44px] rounded-xl px-3 py-2 no-underline hover:bg-warm ${i === active ? "bg-warm" : ""}`} onClick={() => setOpen(false)}>
                 <span className="block font-semibold text-ink">{r.t}</span>
                 <span className="block text-sm text-muted">{r.c}{r.s ? "" : lang === "hi" ? " · जल्द आ रहा है" : " · jald aa raha hai"}</span>
               </Link>

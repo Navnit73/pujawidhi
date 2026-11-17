@@ -45,7 +45,7 @@ export function Q({ q, children }: { q: string; children?: React.ReactNode }) {
   return (
     <details className="group rounded-2xl border border-line bg-surface p-4 open:bg-warm">
       <summary className="flex min-h-[44px] cursor-pointer items-center justify-between gap-3 font-semibold">
-        <span>{q}</span><span aria-hidden className="text-saffron transition group-open:rotate-45 text-2xl leading-none">+</span>
+        <span>{q}</span><span aria-hidden className="text-saffron-text transition group-open:rotate-45 text-2xl leading-none">+</span>
       </summary>
       <div className="mt-2">{children}</div>
     </details>

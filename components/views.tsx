@@ -3,7 +3,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { CATEGORIES, CATEGORY_MAP, type CategoryKey } from "@/lib/categories";
 import { HUBS } from "@/lib/hubs";
 import { allPages, pagesInCategory, twinLang, type Page } from "@/lib/content";
-import { articleLd, breadcrumbLd, organizationLd, websiteLd } from "@/lib/seo";
+import { articleLd, breadcrumbLd, docLd, organizationLd, websiteLd } from "@/lib/seo";
 import { absUrl, pathFor, T } from "@/lib/site";
 import { REVIEWER_TYPES, type Lang } from "@/lib/schema";
 import { Shell } from "./Shell";
@@ -40,7 +40,7 @@ export function PageView({ lang, page }: { lang: Lang; page: Page }) {
   return (
     <Shell lang={lang} twinHref={pathFor(twinLang(lang), m.category, m.slug)}>
       <JsonLd data={articleLd(lang, m, crumbs)} />
-      <div className="mx-auto max-w-6xl px-4 pt-4">
+      <div className="mx-auto max-w-6xl px-4 pt-2">
         {showBody && <TOC headings={page.headings} title={t.onThisPage} variant="mobile" />}
         <div className="mt-4 grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
           <article>
@@ -72,7 +72,7 @@ export function PageView({ lang, page }: { lang: Lang; page: Page }) {
           <Sidebar lang={lang} headings={showBody ? page.headings : []} />
         </div>
       </div>
-      <div className="fixed inset-x-0 bottom-0 z-50 flex gap-2 border-t border-line bg-bg p-2 md:hidden no-print" role="toolbar" aria-label="Actions">
+      <div className="nav-float fixed inset-x-3 bottom-[max(.75rem,env(safe-area-inset-bottom))] z-50 mx-auto flex max-w-md gap-2 rounded-full p-2 md:hidden no-print" role="toolbar" aria-label="Actions">
         <ShareWhatsApp lang={lang} path={path} title={m.title} className="flex-1" />
         <PrintButton label={`🖨 ${t.print}`} className="flex-1" />
       </div>
@@ -140,8 +140,8 @@ export function HomeView({ lang }: { lang: Lang }) {
     <Shell lang={lang} twinHref={pathFor(twinLang(lang))}>
       <JsonLd data={websiteLd(lang)} />
       <div className="mx-auto max-w-6xl px-4">
-        <section className="py-10 text-center md:py-16">
-          <h1 className="mx-auto max-w-3xl font-heading text-4xl leading-tight text-sindoor md:text-5xl">
+        <section className="py-8 text-center sm:py-10 md:py-16">
+          <h1 className="mx-auto max-w-3xl font-heading text-3xl leading-tight text-sindoor sm:text-4xl md:text-5xl">
             {hi ? "आरती, पूजा विधि और पाठ, हिंग्लिश और हिंदी में" : "Aarti, Puja Vidhi aur Path, Hinglish aur Hindi mein"}
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted">
@@ -153,11 +153,11 @@ export function HomeView({ lang }: { lang: Lang }) {
         <PanchangStrip lang={lang} />
 
         <section className="mt-12" aria-labelledby="fest-h">
-          <h2 id="fest-h" className="font-heading text-2xl text-sindoor">{t.festivals}</h2>
+          <h2 id="fest-h" className="font-heading text-2xl text-sindoor">{dated.length ? t.festivals : t.festivalGuides}</h2>
           <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {(dated.length ? dated : festivals.slice(0, 6)).map((f) => (
               <li key={f.id} className="card !p-4 flex items-center justify-between gap-3">
-                <Link href={(hi ? "/hi" : "") + f.path} className="font-semibold">{f.name[lang]}</Link>
+                <Link href={(hi ? "/hi" : "") + f.path} className="flex min-h-[44px] flex-1 items-center font-semibold">{f.name[lang]}</Link>
                 {f.date ? <Countdown date={f.date} lang={lang} /> : null}
               </li>
             ))}
@@ -177,7 +177,7 @@ export function HomeView({ lang }: { lang: Lang }) {
             {mostRead.map((m, i) => (
               <li key={m.slug}>
                 <Link href={pathFor(lang, m.category, m.slug)} className="card !p-4 flex min-h-[64px] items-center gap-4 no-underline">
-                  <span className="font-heading text-3xl text-saffron" aria-hidden>{i + 1}</span>
+                  <span className="font-heading text-3xl text-saffron-text" aria-hidden>{i + 1}</span>
                   <span className="font-semibold text-ink">{m.title}{m.status === "stub" && <span className="badge ml-2">{hi ? "जल्द आ रहा है" : "jald aa raha hai"}</span>}</span>
                 </Link>
               </li>
@@ -196,10 +196,12 @@ export function HomeView({ lang }: { lang: Lang }) {
 }
 
 /* ---------------------------------------------------------- simple docs */
-export function DocView({ lang, title, children, slug }: { lang: Lang; title: string; children: React.ReactNode; slug: string }) {
+export function DocView({ lang, title, children, slug, description, kind = "WebPage" }: { lang: Lang; title: string; children: React.ReactNode; slug: string; description?: string; kind?: "WebPage" | "ContactPage" | "AboutPage" }) {
   const t = T[lang];
+  const crumbs = [{ name: t.breadcrumbHome, path: pathFor(lang) }, { name: title, path: pathFor(lang, slug) }];
   return (
     <Shell lang={lang} twinHref={pathFor(twinLang(lang), slug)}>
+      {description && <JsonLd data={docLd(lang, { type: kind, title, description, path: pathFor(lang, slug), crumbs })} />}
       <div className="mx-auto max-w-3xl px-4 pt-6">
         <Breadcrumbs items={[{ name: t.breadcrumbHome, path: pathFor(lang) }, { name: title, path: pathFor(lang, slug) }]} />
         <h1 className="font-heading text-3xl text-ink md:text-4xl">{title}</h1>

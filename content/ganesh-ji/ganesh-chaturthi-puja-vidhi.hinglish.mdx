@@ -11,35 +11,110 @@ updated: "2026-11-17"
 priority: "P2"
 related: []
 volume: 5000
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: ganesh chaturthi puja. Volume bucket: 5000. */}
+Ganesh Chaturthi Bhadrapada maas ke Shukla paksha ki Chaturthi tithi par manayi jaati hai, jab Ganesh ji ki murti ghar ya pandal mein sthapit karke kai din tak puja ki jaati hai. Yeh page **ghar par sthapna aur puja ki saral vidhi** deta hai. Sthapna ka sahi muhurat aur tithi ka samay har shehar mein alag hota hai, isliye hum koi tarikh ya samay nahi likhte. Apne shehar ke panchang se dekhein. Parivar, kshetra (Maharashtra, Karnataka, Tamil Nadu, Goa aadi) ki parampara alag ho sakti hai, wahi pradhan hai.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab", value: "Bhadrapada Shukla Chaturthi. Tarikh aur muhurat panchang se apne shehar ke hisaab se dekhein." },
+  { label: "Sthapna ka samay", value: "Aam taur par madhyahna (din ke beech) ka samay prachlit batate hain. Sahi muhurat panchang se." },
+  { label: "Kitne din", value: "1.5, 3, 5, 7 ya 10 din parivar ki parampara se. Visarjan ki vidhi alag page par hai." },
+  { label: "Murti", value: "Prachlit parampara mein mitti ki murti." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri id="ganesh-chaturthi" groups={[
+  { title: "Sthapna ke liye", items: [
+    { name: "Ganesh ji ki mitti ki murti", qty: "1" },
+    { name: "Chowki ya peeda aur laal ya peela kapda", qty: "1" },
+    { name: "Kalash, aam ke patte, nariyal", qty: "1 set" },
+    { name: "Toran aur saja-vat ka saman", qty: "yathashakti" },
+  ]},
+  { title: "Puja ke liye", items: [
+    { name: "Durva", qty: "21 gaanth", note: "Na mile to jitni mile." },
+    { name: "Laal phool, haar", qty: "yathashakti" },
+    { name: "Roli, chandan, sindoor, akshat", qty: "thoda" },
+    { name: "Mauli, janeu, vastra", qty: "1 set" },
+    { name: "Modak ya laddu", qty: "21 ya 11", note: "Sankhya parivar ki parampara se." },
+    { name: "Phal, supari, paan, laung, elaichi", qty: "thoda" },
+    { name: "Dhoop, agarbatti, diya, ghee", qty: "1 set" },
+    { name: "Panchamrit", qty: "thoda", note: "Vaikalpik." },
+    { name: "Kapoor aur aarti ki thali", qty: "1" },
+  ]},
+]} />
+
+Samagri ki vistrit list ke liye [Ganesh pujan samagri list](/ganesh-ji/ganesh-pujan-samagri-list) dekhein. Murti aur disha ke bare mein [sthapna, murti aur disha ke niyam](/ganesh-ji/ganesh-sthapana-murti-disha-niyam) page padhein.
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Taiyari">
+    Sthapna ke din subah snaan karke saaf kapde pehnein. Ghar ki saaf-safai karein. Puja ki jagah par chowki rakhein, uspar kapda bichayein aur toran-saja-vat karein. Murti ko pehle se ghar mein saaf kapde se dhak kar rakhein.
+  </Step>
+  <Step title="Aachman aur sankalp">
+    Teen baar aachman karein, phir haath mein jal, akshat aur phool lekar sankalp lein. Sankalp mein apna naam, sthaan aur "Ganesh Chaturthi par Shri Ganesh ji ki sthapna aur puja" ka uddeshya bolein. Muhurat panchang se.
+    <Mantra dev={`ॐ केशवाय नमः ।
+ॐ नारायणाय नमः ।
+ॐ माधवाय नमः ।`} rom={`Om Keshavaya namah
+Om Narayanaya namah
+Om Madhavaya namah`} arth="Bhagwan Vishnu ke teen naam lekar jal grahan karna shuddhi ka prarambh maana jaata hai." />
+  </Step>
+  <Step title="Kalash sthapna">
+    Chowki ke paas jal se bhara kalash rakhein, uspar aam ke patte aur nariyal sthapit karein. Kalash ko prachlit parampara mein shubh maana jaata hai.
+  </Step>
+  <Step title="Ganesh ji ko virajman karna">
+    Murti ko chowki par shraddha se virajman karein. Dhyan karein.
+    <Mantra dev={`वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।
+निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥`} rom={`Vakratund Mahakay Suryakoti Samaprabh
+Nirvighnam kuru me Deva sarvakaryeshu sarvada`} arth="He vakratund, vishalkaay, karodon suryon jaise tejasvi Deva, mere sabhi kaaryon mein hamesha vighna door karein." />
+  </Step>
+  <Step title="Pran pratishtha">
+    Parampara mein murti mein pran pratishtha ki vidhi pandit ji se karwayi jaati hai. Ghar par saral roop mein haath mein phool-akshat lekar Ganesh ji ka avahan karein aur "Om Gan Ganapataye namah" bolein. Pran pratishtha ke mantra aur kram kul ki parampara se alag hote hain, isliye pandit ji ki salah lein.
+  </Step>
+  <Step title="Shodashopachar puja">
+    Aasan, paadya, arghya, snaan (jal ya panchamrit), vastra, janeu, chandan, sindoor, phool, durva, dhoop, deep, naivedya aadi upchar kram se arpit karein. Har upchar ke saath "Om Gan Ganapataye namah" bol sakte hain. Durva ki 21 gaanthein ek-ek karke chadhayein.
+  </Step>
+  <Step title="Naivedya aur aarti">
+    Modak ya laddu ka bhog lagayein. Phir [Ganesh ji ki aarti](/ganesh-ji/ganesh-ji-ki-aarti) ya Maharashtra ki parampara ke anusaar [Sukhkarta Dukhharta](/ganesh-ji/ganpati-aarti-sukhkarta-dukhharta) gayein. Prasad baantein.
+  </Step>
+  <Step title="Roz ki seva">
+    Jitne din murti ghar mein rahe, roz subah-shaam diya, bhog aur aarti karne ki parampara hai. Roz ki chhoti puja ke liye [daily Ganesh puja](/ganesh-ji/daily-ganesh-puja-at-home) dekhein.
+  </Step>
+  <Step title="Kshama prarthana">
+    Puja mein jo bhool ho uske liye kshama maangein.
+    <Mantra dev={`आवाहनं न जानामि न जानामि विसर्जनम् ।
+पूजां चैव न जानामि क्षमस्व परमेश्वर ॥`} rom={`Aavahanam na jaanami na jaanami visarjanam
+Poojam chaiva na jaanami kshamasva Parameshwar`} arth="Main na avahan jaanta hoon, na visarjan, na puja ki vidhi. Mujhse jo bhool hui ho, use kshama karein." />
+  </Step>
 </Steps>
+
+Antim din ya parivar ki tay ki hui avadhi par visarjan hota hai. Uski vidhi ke liye [Ganesh visarjan puja vidhi](/ganesh-ji/ganesh-visarjan-puja-vidhi) dekhein.
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- **Muhurat:** Sthapna ka muhurat panchang se apne shehar ke hisaab se dekhein. Online-socia media par aaya samay aapke shehar ka na bhi ho sakta hai.
+- **Tulsi na chadhayein:** Prachlit parampara mein Ganesh ji ko tulsi nahi chadhayi jaati.
+- **Chandra darshan:** Is din chandrama na dekhne ki ek prachlit manyata hai. Parivar ya pandit ji se is bare mein poochh lein.
+- **Murti:** Aam taur par mitti ki murti prachlit hai, jo visarjan mein jal mein ghul jaaye.
+- **Seva ka dhyan:** Jitne din sthapna ho, safai, bhog aur aarti ki zimmedari parivar mein baant lein.
+- **Parampara:** Sthapna ke dino ki sankhya, bhog aur rasam kshetra ke hisaab se alag hoti hain.
 
 ## Mahatva aur katha
 
-TODO: short significance, only if relevant
+Ganesh Chaturthi ko Ganesh ji ke janm-utsav ke roop mein manaya jaata hai. Prachlit katha ke anusaar Mata Parvati ne apne sharir ke ubtan se ek balak ki murti banakar use jeevan diya. Baad mein Shiv ji ne krodh mein us balak ka sar kaat diya, aur phir Parvati ji ke dukh par hathi ka sar lagakar unhe jeevit kiya. Is katha ke kai roop Puranon mein aur lok-parampara mein milte hain. Isi se Ganesh ji ko Gajanan kaha jaata hai. Maharashtra mein is utsav ko sarvajanik roop dene ki aitihasik parampara bhi jaani jaati hai, aur aaj yeh desh ke kai hisson mein dhoomdham se manaya jaata hai. Yeh page vishwas aur parampara ki jaankari ke liye hai.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Ganesh Chaturthi par sthapna ka muhurat kaise dekhein?">Apne shehar ke panchang se. Tithi ke samay aur madhyahna ka kaal shehar ke hisaab se badalte hain, isliye hum koi samay nahi likhte.</Q>
+  <Q q="Ghar mein Ganesh ji kitne din rakhein?">1.5, 3, 5, 7 ya 10 din parivar ki parampara se. Koi ek sarvamanya niyam nahi hai.</Q>
+  <Q q="Kya sthapna bina pandit ji ke ho sakti hai?">Haan, saral vidhi se shraddha ke saath ghar par ho sakti hai. Pran pratishtha jaise anushthan ke liye pandit ji ki salah achhi rehti hai.</Q>
+  <Q q="Kaisi murti lani chahiye?">Prachlit parampara mein mitti ki murti. Sund ki disha aur size par alag-alag mat hain. Iske liye [sthapna aur murti ka page](/ganesh-ji/ganesh-sthapana-murti-disha-niyam) dekhein.</Q>
+  <Q q="Ganesh Chaturthi par chandrama kyun nahi dekhte?">Isse judi ek prachlit manyata hai ki us din chandra darshan na karein. Alag-alag parivar ise alag tarah se maante hain. Is bare mein parivar ke bade ya pandit ji se poochhein.</Q>
+  <Q q="Kya modak ki sankhya tay hai?">Parampara mein 21 ya 11 modak ki baat kahi jaati hai, par yeh parivar par nirbhar hai. Shraddha ke anusaar chadhayein.</Q>
 </FAQ>

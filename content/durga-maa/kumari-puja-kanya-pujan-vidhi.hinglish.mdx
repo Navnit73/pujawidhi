@@ -11,35 +11,90 @@ updated: "2026-11-17"
 priority: "P2"
 related: []
 volume: 5000
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: kumari puja. Volume bucket: 5000. */}
+Kumari puja, jise Uttar Bharat mein **kanya pujan** ya **kanjak** kehte hain, Navratri aur Durga Puja ki ek pyaari parampara hai. Isme chhoti kanyaon ko Devi ka roop maankar aadar se bhojan karaya jaata hai aur unka aashirvad liya jaata hai. Bengal mein Ashtami ko Kumari puja Durga Puja ka hissa hai, aur Belur Math jaisi sansthaon mein bhi yeh parampara jaani jaati hai. Yeh page ghar mein kanya pujan ki saral vidhi deta hai. Tithi aur din apne panchang aur parivar ki parampara se tay karein.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab", value: "Prachlit roop mein Ashtami ya Navami par. Kuch parivar Navratri ke kisi aur din bhi karte hain. Tithi apne panchang se dekhein." },
+  { label: "Kitni kanya", value: "9 kanya ki parampara hai, jinke saath ek balak ko bhi bulane ka rivaaj kai jagah hai. Na mil sake to jitni kanya aa sakein, utni bhi shraddha se manya hai." },
+  { label: "Umar", value: "Prachlit roop mein lagbhag 2 se 10 varsh ki kanyayein. Parampara aur kshetra ke hisaab se alag-alag maanyatayein hain." },
+  { label: "Kitna samay", value: "Taiyari aur bhojan sahit lagbhag 1-1.5 ghanta." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri id="kanya-pujan" groups={[
+  { title: "Puja ka saaman", items: [
+    { name: "Saaf aasan ya chatai", qty: "kanya ki sankhya ke anusar" },
+    { name: "Parat ya thaali aur saaf jal (charan dhone ke liye)", qty: "1" },
+    { name: "Saaf tauliya ya kapda", qty: "1" },
+    { name: "Roli, kumkum ya chandan, akshat", qty: "thoda" },
+    { name: "Mauli (kalawa)", qty: "har kanya ke liye" },
+    { name: "Phool aur diya, agarbatti", qty: "1 set" },
+  ]},
+  { title: "Bhojan", items: [
+    { name: "Halwa, chana, puri (prachlit)", qty: "yathashakti", note: "Parivar ki parampara ke anusar. Kanya ki ruchi aur sehat ka dhyan rakhein." },
+    { name: "Phal ya mithai", qty: "yathashakti" },
+  ]},
+  { title: "Upahaar", items: [
+    { name: "Chunri ya rumal", qty: "har kanya ke liye" },
+    { name: "Dakshina ya chhota upahaar (kitaab, khilaune, stationery aadi)", qty: "yathashakti", note: "Rakam ya upahaar apni shraddha aur kshamta ke anusar. Kisi tay rakam ka niyam nahi hai." },
+  ]},
+]} />
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Pehle din ya subah ka nimantran">
+    Ek din pehle ya subah kanyaon aur unke parivar ko pyaar se nimantran dein, taaki unhe aane mein suvidha ho. Kai jagah ek balak ko "langur" ya Bhairav ke roop mein bhi bulaya jaata hai. Yeh parampara kshetra par nirbhar hai.
+  </Step>
+  <Step title="Taiyari">
+    Ghar saaf karein, snaan karke saaf kapde pehnein. Pehle Maa Durga ki puja karein aur aarti karein, taaki kanya pujan Devi ki puja ke baad ho. Poori puja ke liye [ghar par Durga Puja vidhi](/durga-maa/durga-puja-at-home-vidhi) dekhein.
+  </Step>
+  <Step title="Kanyaon ka swagat aur aasan">
+    Kanyaon ka haath jodkar swagat karein aur unhe saaf aasan par bithayein. Unhe Devi ka roop maankar sneh se vyavhaar karein.
+    <Mantra dev={`या देवी सर्वभूतेषु मातृरूपेण संस्थिता ।
+नमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः ॥`} rom={`Ya Devi sarvabhooteshu matri-roopena sansthita
+Namastasyai namastasyai namastasyai namo namah`} arth="Jo Devi sabhi praniyon mein maa ke roop mein sthit hain, unhe baar-baar pranam." />
+  </Step>
+  <Step title="Charan dhona aur tilak">
+    Parat mein saaf jal lekar pyaar se kanyaon ke charan dhoyein aur saaf kapde se ponchh dein. Phir roli ya chandan ka tilak, akshat aur kalawa (mauli) lagayein. Phool arpit karein.
+  </Step>
+  <Step title="Bhojan">
+    Kanyaon ko prem se bhojan karayein. Parampara mein halwa, chana aur puri prasad ke roop mein prachlit hai. Kanya ko jitna chahein, utna hi parosein, zabardasti na karein. Allergy ya khaane ki ruchi ka dhyan rakhein.
+  </Step>
+  <Step title="Upahaar aur dakshina">
+    Bhojan ke baad chunri ya rumal, aur apni shraddha anusar dakshina ya chhota upahaar dein. Phir haath jodkar unke charan chhuyein aur aashirvad maangein. Dakshina ya upahaar ke baare mein koi tay rakam nahi hai.
+  </Step>
+  <Step title="Samapan">
+    Kanyaon ko pyaar se vida karein. Bhojan ka ek hissa Devi ko naivedya ke roop mein pehle arpit kiya jaata hai, baad mein parivar ke saath prasad grahan karein. Ant mein [Durga ji ki aarti](/durga-maa/durga-ji-ki-aarti) gayein.
+  </Step>
 </Steps>
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- **Aadar:** Kanya ko sirf rasam ke liye nahi, Devi ke roop mein aadar se bulayein. Bachchon ki thakaan, bhookh aur sharm ka khayal rakhein.
+- **Sankhya ka dabaav:** 9 ki sankhya parampara hai, par poori na ho paye to chinta na karein. Jitni kanya aa sakein, shraddha se kar lein.
+- **Bhojan:** Khana saaf aur taaza ho. Bachchon ki sehat aur allergy ka dhyan rakhein. Is page par koi swasthya daava nahi hai.
+- **Photo aur video:** Kanya ya unke parivar ki sehmati ke bina photo ya video ko saajha na karein.
+- **Parivar ka sammaan:** Kanyaon ko bhejte samay unke maa-baap ko bhi dhanyavaad dein.
+- **Apni parampara:** Kab karein aur kitni kanya, yeh parivar ke rivaaj par nirbhar hai. Pandit ji ya bado se poochh lein.
 
-## Mahatva aur katha
+## Mahatva aur parampara
 
-TODO: short significance, only if relevant
+Navratri mein Maa Durga ke nau roopon ki puja hoti hai, aur kanya ko un roopon ka pratik maanne ki parampara hai. Is vishwas ka sandarbh Devi ki upasana mein striyon aur kanyaon ke sammaan se jodkar dekha jaata hai. Bengal ki Durga Puja mein Ashtami ke din Kumari puja alag se hoti hai. Nau roopon ke baare mein [Nau Durga ke 9 roop](/navratri-devi/nau-durga-9-roop) padhein. Ashtami ki poori puja ke liye [Maha Ashtami puja vidhi](/durga-maa/maha-ashtami-puja-vidhi) dekhein. Navratri ki poori vidhi ke liye [Navratri puja vidhi](/navratri-devi/navratri-puja-vidhi) padhein.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Kanya pujan Ashtami ko karein ya Navami ko?">Dono din prachlit hain. Kai parivar apni kul parampara ke anusar ek din chunte hain. Apne parivar ya pandit ji se poochhein aur tithi panchang se dekhein.</Q>
+  <Q q="Kitni kanya bulani chahiye?">Parampara mein 9 kanya maani jaati hain. Agar itni na ho paaye to jitni aa sakein, utni ko shraddha se bhojan karaya ja sakta hai.</Q>
+  <Q q="Kya ladke ko bhi bulana zaroori hai?">Kai jagah ek balak ko Bhairav ya langur ke roop mein bulane ki parampara hai, par yeh sabhi jagah nahi hai. Aap apne parivar ki parampara anusar karein.</Q>
+  <Q q="Kanya ko kya dakshina deni chahiye?">Koi tay rakam nahi hai. Apni shraddha aur kshamta ke anusar upahaar ya dakshina dein. Chunri, kitaab ya khilaune bhi diye jaate hain.</Q>
+  <Q q="Kanya pujan ke baad hi vrat kholna chahiye?">Bahut se parivar kanya pujan aur prasad ke baad vrat kholte hain. Yeh parivar ke niyam par nirbhar hai, apne bado se poochhein.</Q>
 </FAQ>

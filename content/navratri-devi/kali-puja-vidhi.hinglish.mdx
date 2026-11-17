@@ -11,35 +11,95 @@ updated: "2026-11-17"
 priority: "V"
 related: []
 volume: 0
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: kali puja. Volume bucket: not in CSV, validate first. */}
+Kali Puja Maa Kali ki upasna ka parv hai, jo Diwali ki amavasya ki raat mein, khaaskar Bengal, Odisha, Assam aur Mithila kshetra mein bade bhaav se manaya jaata hai. Jahan Uttar aur Pashchim Bharat mein usi raat Lakshmi puja hoti hai, wahan in kshetron mein raat ko Maa Kali ki puja ki parampara hai. Yeh page ghar ke liye ek saral vidhi deta hai. Kali upasna ke tantrik aur Vaishnav jaise kai sampradaay hain, aur unke tareeke alag hote hain, isliye apne parivar ya pandit ji ki parampara follow karein. Yahan **prachlit saral roop** diya gaya hai.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab", value: "Diwali ki amavasya ki raat. Tithi aur nishita kaal ka muhurat apne shehar ke panchang se dekhein." },
+  { label: "Kitna samay", value: "Saral ghar ki puja 45-60 minute. Poori raatri puja mein zyada samay lagta hai." },
+  { label: "Kya chahiye", value: "Maa Kali ki tasveer ya murti, laal gudhal ke phool, diya, dhoop, phal aur mithai ka bhog." },
+  { label: "Salaah", value: "Kali puja ki paddhati kaafi alag-alag hoti hai. Bade anushthan ke liye pandit ji se zaroor poochhein." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri groups={[
+  { title: "Zaroori", items: [
+    { name: "Maa Kali ki murti ya tasveer", qty: "1" },
+    { name: "Chowki aur laal kapda", qty: "1" },
+    { name: "Kalash ya lota (jal ke liye)", qty: "1" },
+    { name: "Diya, ghee ya tel, batti", qty: "kai" },
+    { name: "Dhoop, agarbatti, kapoor", qty: "1 set" },
+    { name: "Akshat, roli ya sindoor", qty: "thoda" },
+  ]},
+  { title: "Devi ko priya", items: [
+    { name: "Laal gudhal (jaba) ke phool", qty: "yathashakti", note: "Prachlit parampara mein Kali ko laal gudhal arpit karte hain." },
+    { name: "Phal", qty: "kai prakaar" },
+    { name: "Mithai ya khichdi, kheer jaisa bhog", qty: "yathashakti", note: "Bhog parivar aur kshetra ke anusaar alag hota hai." },
+  ]},
+  { title: "Baaki", items: [
+    { name: "Gangajal", qty: "thoda" },
+    { name: "Aarti ki thali", qty: "1" },
+    { name: "Dakshina", qty: "yathashakti" },
+  ]},
+]} />
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Taiyari">
+    Amavasya ke din ghar aur puja sthaan saaf karein. Chowki par laal kapda bichayein aur Maa Kali ko virajman karein. Snaan karke saaf kapde pehnein. Kai parivar din mein vrat rakhte hain aur raat ko puja ke baad prasad lete hain. Yeh parivar ki parampara par nirbhar hai.
+  </Step>
+  <Step title="Ganesh smaran aur sankalp">
+    Pehle Ganesh ji ka smaran karein. Phir haath mein jal, akshat aur phool lekar apna naam, gotra (agar pata ho), sthaan aur tithi bolte hue sankalp lein. Saral roop: "Main Kartik amavasya ki raat Maa Kali ki puja shraddha se karne ka sankalp leta/leti hoon." Jal zameen par chhod dein.
+  </Step>
+  <Step title="Dhyan aur avahan">
+    Haath jodkar Maa Kali ka dhyan karein aur unka avahan karein.
+    <Mantra dev={`ॐ जयन्ती मङ्गला काली भद्रकाली कपालिनी ।
+दुर्गा क्षमा शिवा धात्री स्वाहा स्वधा नमोऽस्तु ते ॥`} rom={`Om Jayanti Mangala Kali Bhadrakali Kapalini
+Durga Kshama Shiva Dhatri Swaha Swadha namostu te`} arth="Jayanti, Mangala, Kali, Bhadrakali, Kapalini, Durga, Kshama, Shiva, Dhatri, Swaha aur Swadha roop mein Devi, aapko namaskar hai." />
+  </Step>
+  <Step title="Upchar arpit karna">
+    Devi ko aasan, jal, vastra (ya laal kapda), sindoor ya roli, akshat arpit karein. Laal gudhal ke phool chadhayein. Dhoop aur deep dikhayein. Kai parivar is raat bahut saare diye jalate hain.
+  </Step>
+  <Step title="Mantra jaap">
+    Kali ka prachlit beej mantra "Krim" hai. Kuch parampara mein ise Dakshina Kali ke beej ke roop mein jaapa jaata hai.
+    <Mantra dev="ॐ क्रीं कालिकायै नमः" rom="Om Kreem Kalikayai namah" arth="Maa Kali ko namaskar. Jaap ki sankhya aur vidhi apne pandit ji ya guru se poochh lein." />
+  </Step>
+  <Step title="Bhog">
+    Phal, mithai ya parivar ki parampara ka bhog lagayein. Bhog taaza aur saaf ho. Bali ya animal sacrifice jaisi parampara kuch tantrik kshetron mein hai, par ghar ki saral puja mein sirf sattvik bhog arpit karna sabse aam hai. Hum yahan sirf sattvik vidhi bata rahe hain.
+  </Step>
+  <Step title="Aarti aur pushpanjali">
+    Kapoor ya ghee ki batti se aarti karein. Kali ki aarti ya Devi aarti, jaise [Ambe tu hai Jagdambe Kali](/navratri-devi/ambe-tu-hai-jagdambe-kali-aarti), gayein. Ant mein pushpanjali karke kshama prarthana karein aur prasad baantein.
+    <Mantra dev={`आवाहनं न जानामि न जानामि विसर्जनम् ।
+पूजां चैव न जानामि क्षमस्व परमेश्वरि ॥`} rom={`Aavahanam na jaanami na jaanami visarjanam
+Poojam chaiva na jaanami kshamasva Parameshwari`} arth="Main na avahan jaanta/jaanti hoon, na visarjan, na puja ki vidhi. Mujhse jo bhool hui ho, use kshama karein." />
+  </Step>
 </Steps>
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- **Lakshmi puja se alag:** Diwali ki raat kai ghar mein Lakshmi-Ganesh puja hoti hai. Kali puja alag anushthan hai. Parivar jo karta hai wahi karein. Lakshmi puja ke liye [Aarti Sangrah](/puja-basics/aarti-sangrah) mein Lakshmi aarti dekhein.
+- **Muhurat:** Nishita kaal ka samay shehar ke hisaab se badalta hai. Panchang se dekhein, kisi aur shehar ka samay na lein.
+- **Tantrik vidhi:** Poori tantrik Kali puja guru ya anubhavi pandit ke nirdeshan mein hi karni chahiye. Ghar mein saral, sattvik puja prachlit hai.
+- **Aag aur diye:** Raat ko bahut saare diye aur kapoor jalate samay suraksha ka dhyan rakhein, khaaskar bachhon aur pardon ke paas.
+- **Shuddhta:** Snaan karke saaf kapde pehnein. Puja ke samay mobile silent rakhein.
 
 ## Mahatva aur katha
 
-TODO: short significance, only if relevant
+Maa Kali ko Mahakali, Devi ke ugra par karunamayi roop ke roop mein pooja jaata hai, jo adharm aur bhay ka naash karti hain. Devi Mahatmya mein Kali ka varnan Chamunda aur Chandi ke roop mein aata hai, jisme unhone Chand-Mund aur Raktabeej jaise asuron ka sanhar kiya. Bengal mein Kali Puja ko Shyama Puja bhi kaha jaata hai. Alag-alag kshetron mein tithi aur vidhi ke vistar alag hain. Yeh page vishwas aur parampara ke baare mein jaankari ke liye hai. Durga ki puja ke liye [Navratri puja vidhi](/navratri-devi/navratri-puja-vidhi) dekhein.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Kali puja kis din hoti hai?">Aam taur par Diwali ki amavasya ki raat. Tithi aur muhurat apne shehar ke panchang se dekhein.</Q>
+  <Q q="Kya Kali puja ghar par ho sakti hai?">Haan, saral sattvik vidhi se shraddha ke saath ho sakti hai. Tantrik ya bade anushthan ke liye pandit ji ya guru ki salaah lein.</Q>
+  <Q q="Kali ko kaun sa phool chadhate hain?">Prachlit parampara mein laal gudhal (jaba) ka phool chadhaya jaata hai. Kuch parampara mein 108 gudhal ki mala bhi chadhayi jaati hai.</Q>
+  <Q q="Kya Kali puja aur Lakshmi puja ek hi raat hoti hain?">Haan, dono Diwali ki amavasya par hoti hain, par alag kshetron mein alag. Kuch ghar mein dono hoti hain. Parivar ki parampara dekhein.</Q>
+  <Q q="Kya Kali puja sirf Bengal mein hoti hai?">Bengal, Odisha, Assam aur Mithila mein yeh vishesh roop se prachlit hai. Baaki bharat mein bhi Kali ke bhakt iski puja karte hain.</Q>
 </FAQ>

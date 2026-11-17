@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import { CITIES, DEFAULT_CITY, cityByKey } from "@/lib/cities";
-import { fmtTime, istDate, solarTimes, type ProviderResponse } from "@/lib/panchang";
+import { fmtTime, istDate, localPanchang, solarTimes, type ProviderResponse } from "@/lib/panchang";
 import type { Lang } from "@/lib/schema";
 
 const WEEKDAYS = {
@@ -37,30 +37,68 @@ function useProvider(city: string, date: string) {
   return data;
 }
 
+function dayLabel(date: string, weekday: number, lang: Lang) {
+  const [y, m, d] = date.split("-").map(Number);
+  const mon = new Intl.DateTimeFormat(lang === "hi" ? "hi-IN" : "en-IN", { month: "long", timeZone: "UTC" }).format(new Date(Date.UTC(y, m - 1, d)));
+  return `${WEEKDAYS[lang][weekday]}, ${d} ${mon} ${y}`;
+}
+
+/** "tak 3:12 PM" / "Ends 3:12 PM", with the day when it spills past today. */
+function endsText(iso: string | undefined, date: string, hi: boolean) {
+  if (!iso) return null;
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return null;
+  const next = istDate(d) !== date;
+  const t = fmtTime(d);
+  return hi ? `${t}${next ? " (अगले दिन)" : ""} तक` : `${t}${next ? " (agle din)" : ""} tak`;
+}
+
+function Cell({ label, children, sub, badge, className = "" }: { label: string; children: React.ReactNode; sub?: React.ReactNode; badge?: string; className?: string }) {
+  return (
+    <div className={`rounded-2xl bg-surface p-4 shadow-[0_1px_2px_rgba(43,26,18,.06)] ${className}`}>
+      <dt className="eyebrow flex items-center justify-between gap-2">{label}{badge && <span className="rounded-full bg-saffron px-2 py-0.5 text-[.7rem] normal-case tracking-normal text-on-saffron">{badge}</span>}</dt>
+      <dd className="mt-1 text-lg font-semibold leading-snug tabular-nums text-ink">{children}</dd>
+      {sub && <dd className="mt-0.5 text-sm text-muted">{sub}</dd>}
+    </div>
+  );
+}
+
 /** Compact strip for the homepage. Solar times are computed in the browser (tiny, no network). */
 export function PanchangStrip({ lang }: { lang: Lang }) {
   const [city, setCity] = useCity();
   const [date, setDate] = useState<string | null>(null);
-  useEffect(() => setDate(istDate()), []);
+  const [now, setNow] = useState<number | null>(null);
+  useEffect(() => {
+    const tick = () => { const d = new Date(); setNow(d.getTime()); setDate(istDate(d)); };
+    tick();
+    const id = setInterval(tick, 60000);
+    return () => clearInterval(id);
+  }, []);
   const times = useMemo(() => (date ? solarTimes(city, date) : null), [city, date]);
-  const p = useProvider(city, date ?? "");
+  const provider = useProvider(city, date ?? "");
+  // Provider (licensed) wins; otherwise tithi/nakshatra are computed locally at sunrise.
+  const local = useMemo(() => (times ? localPanchang(times.sunrise) : null), [times]);
+  const p = provider?.tithi || provider?.nakshatra ? provider : local;
   const hi = lang === "hi";
-  const cell = "rounded-2xl bg-surface border border-line px-4 py-3 min-w-[9rem]";
+  const rahuNow = !!(times && now && now >= times.rahuStart.getTime() && now < times.rahuEnd.getTime());
+  const dash = "–";
   return (
-    <section aria-label={hi ? "आज का पंचांग" : "Aaj ka panchang"} className="card !bg-warm">
-      <div className="mb-3 flex flex-wrap items-center gap-3">
-        <h2 className="font-heading text-xl text-sindoor">{hi ? "आज का पंचांग" : "Aaj ka panchang"}</h2>
+    <section aria-label={hi ? "आज का पंचांग" : "Aaj ka panchang"} className="card">
+      <div className="mb-4 flex flex-wrap items-end justify-between gap-x-4 gap-y-3">
+        <div>
+          <h2 className="font-heading text-2xl text-sindoor">{hi ? "आज का पंचांग" : "Aaj ka panchang"}</h2>
+          <p className="min-h-[1.5rem] text-sm text-muted">{date && times ? `${dayLabel(date, times.weekday, lang)} · IST` : "\u00a0"}</p>
+        </div>
         <CitySelect lang={lang} city={city} onChange={setCity} />
-        {date && times && <span className="text-sm text-muted">{WEEKDAYS[lang][times.weekday]} · IST</span>}
       </div>
-      <dl className="grid grid-cols-2 gap-3 md:grid-cols-5">
-        <div className={cell}><dt className="eyebrow">{hi ? "तिथि" : "Tithi"}</dt><dd>{p?.tithi?.[lang] ?? "-"}</dd></div>
-        <div className={cell}><dt className="eyebrow">{hi ? "नक्षत्र" : "Nakshatra"}</dt><dd>{p?.nakshatra?.[lang] ?? "-"}</dd></div>
-        <div className={cell}><dt className="eyebrow">{hi ? "राहु काल" : "Rahu kaal"}</dt><dd>{times ? `${fmtTime(times.rahuStart)} – ${fmtTime(times.rahuEnd)}` : "-"}</dd></div>
-        <div className={cell}><dt className="eyebrow">{hi ? "सूर्योदय" : "Sunrise"}</dt><dd>{times ? fmtTime(times.sunrise) : "-"}</dd></div>
-        <div className={cell}><dt className="eyebrow">{hi ? "सूर्यास्त" : "Sunset"}</dt><dd>{times ? fmtTime(times.sunset) : "-"}</dd></div>
+      <dl className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-5">
+        <Cell label={hi ? "तिथि" : "Tithi"} sub={p?.tithi ? <>{p.paksha?.[lang]}<br />{endsText(p.tithi.endsAt, date ?? "", hi)}</> : undefined}>{p?.tithi?.[lang] ?? dash}</Cell>
+        <Cell label={hi ? "नक्षत्र" : "Nakshatra"} sub={p?.nakshatra ? endsText(p.nakshatra.endsAt, date ?? "", hi) : undefined}>{p?.nakshatra?.[lang] ?? dash}</Cell>
+        <Cell label={hi ? "राहु काल" : "Rahu kaal"} badge={rahuNow ? (hi ? "अभी" : "Abhi") : undefined} className="col-span-2 sm:col-span-1">{times ? `${fmtTime(times.rahuStart)} – ${fmtTime(times.rahuEnd)}` : dash}</Cell>
+        <Cell label={hi ? "सूर्योदय" : "Sunrise"}>{times ? fmtTime(times.sunrise) : dash}</Cell>
+        <Cell label={hi ? "सूर्यास्त" : "Sunset"}>{times ? fmtTime(times.sunset) : dash}</Cell>
       </dl>
-      {!p && <p className="mt-3 text-sm text-muted">{hi ? "तिथि और नक्षत्र लाइसेंस प्राप्त पंचांग स्रोत से आएँगे। अभी सिर्फ़ सूर्य आधारित समय दिख रहे हैं।" : "Tithi aur nakshatra licensed panchang source se aayenge. Abhi sirf surya-aadharit samay dikh rahe hain."}</p>}
+      <p className="mt-3 text-sm text-muted">{hi ? "तिथि और नक्षत्र सूर्योदय के समय के हैं और अनुमानित हैं; व्रत-त्योहार या मुहूर्त के लिए अपने पंचांग से मिलान करें।" : "Tithi aur nakshatra sunrise ke samay ke hain aur anumanit hain; vrat-tyohaar ya muhurat ke liye apne panchang se milaan karein."}</p>
     </section>
   );
 }

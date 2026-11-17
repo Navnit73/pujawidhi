@@ -11,35 +11,109 @@ updated: "2026-11-17"
 priority: "V"
 related: []
 volume: 0
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: janmashtami puja vidhi. Volume bucket: not in CSV, validate first. */}
+Janmashtami Bhagwan Shri Krishna ke janm ka utsav hai. Parampara ke anusaar Krishna ka janm Bhadrapad maas ki Krishna Paksha ashtami ki aadhi raat ko Mathura ki jail mein Devaki aur Vasudev ke ghar hua tha. Isliye puja ka mukhya samay **madhyaratri (nishita kaal)** maana jaata hai. Yeh page ghar ke liye ek saral aur poori vidhi deta hai. Aapke parivar ya sampraday (Vaishnav, Pushtimarg, ISKCON, Smarta) mein jo vidhi chalti hai, wahi apnayein. Yahan **prachlit roop** diya gaya hai.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab", value: "Bhadrapad Krishna Paksha ashtami. Date aur nishita kaal ka muhurat apne shehar ke panchang se dekhein, kyunki tithi ka samay shehar ke hisaab se badalta hai." },
+  { label: "Mukhya puja", value: "Madhyaratri mein Krishna janm, abhishek, shringar, bhog aur aarti." },
+  { label: "Vrat", value: "Bahut se log din bhar vrat rakhkar raat ko puja ke baad vrat kholte hain. Vrat ke niyam parivar aur kshetra ke hisaab se alag hote hain." },
+  { label: "Kitna samay", value: "Chhoti puja 30-45 minute. Poori vidhi 1-1.5 ghanta." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri groups={[
+  { title: "Zaroori", items: [
+    { name: "Laddu Gopal ya Krishna ji ki murti ya tasveer", qty: "1" },
+    { name: "Chauki aur saaf peela ya laal kapda", qty: "1" },
+    { name: "Kalash ya lota (jal ke liye)", qty: "1" },
+    { name: "Diya, ghee, batti", qty: "2" },
+    { name: "Agarbatti aur dhoop", qty: "1 packet" },
+    { name: "Akshat, roli, chandan", qty: "thoda" },
+    { name: "Phool aur phool-mala", qty: "yathashakti" },
+    { name: "Tulsi dal", qty: "bhog ke liye" },
+  ]},
+  { title: "Abhishek ke liye", items: [
+    { name: "Panchamrit (doodh, dahi, ghee, shahad, cheeni)", qty: "thoda" },
+    { name: "Shuddh jal aur gangajal", qty: "thoda", note: "Gangajal na ho to saaf jal." },
+    { name: "Naya vastra, mor-pankh, mukut, bansuri", qty: "1 set", note: "Shringar ke liye, jo available ho." },
+  ]},
+  { title: "Bhog", items: [
+    { name: "Makhan-mishri", qty: "1 katori" },
+    { name: "Dhaniya ki panjiri", qty: "thodi", note: "Janmashtami par prachlit prasad." },
+    { name: "Fal aur mithai", qty: "yathashakti" },
+  ]},
+  { title: "Baaki", items: [
+    { name: "Jhula ya chhota palna", qty: "1", note: "Vaikalpik." },
+    { name: "Kapoor aur aarti ki thali", qty: "1" },
+    { name: "Dakshina", qty: "yathashakti" },
+  ]},
+]} />
+
+Puja ka poora samagri checklist [Puja Samagri Master List](/puja-basics/puja-samagri-master-list) mein bhi dekh sakte hain.
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Din ki taiyari aur sankalp">
+    Subah snan karke saaf kapde pahnein. Jo vrat rakhte hain wo sankalp lein. Sankalp ka saral roop: "Main Shri Krishna Janmashtami ka vrat aur puja shraddha se kar raha/rahi hoon, meri puja sweekar karein." Sankalp ke tareeke ke liye [Puja sankalp kaise lein](/puja-basics/puja-sankalp-kaise-lein) dekhein.
+  </Step>
+  <Step title="Sthan sajayein">
+    Raat ko puja se pehle ghar ke mandir ya saaf jagah par chauki rakhein aur kapda bichayein. Krishna ji ko virajman karein. Jhula ho to use phool se sajayein.
+  </Step>
+  <Step title="Aachman aur dhyan">
+    Teen baar aachman karke diya jalayein aur Krishna ji ka dhyan karein.
+    <Mantra dev={`ॐ कृष्णाय वासुदेवाय हरये परमात्मने ।
+प्रणत क्लेशनाशाय गोविन्दाय नमो नमः ॥`} rom={`Om Krishnaya Vasudevaya Haraye Paramatmane
+Pranat klesh-nashaya Govindaya namo namah`} arth="Vasudev ke putra Krishna, Hari aur Paramatma ko pranam, jo sharan mein aaye bhakton ke kasht door karte hain, un Govind ko baar-baar namaskar." />
+  </Step>
+  <Step title="Janm ka kshan (madhyaratri)">
+    Nishita kaal mein Krishna ji ka janm manaya jaata hai. Bahut se ghar mein is samay shankh ya ghanti bajti hai aur "Nand ke ghar anand bhayo, jai Kanhaiya Lal ki" jaise bhajan gaye jaate hain. Laddu Gopal ko jhule par virajman karke dheere se jhulayein.
+  </Step>
+  <Step title="Abhishek">
+    Pehle shuddh jal se, phir panchamrit se, aur ant mein phir saaf jal se snan karayein. Mulayam kapde se ponchhein. Har upchar ke saath yeh mantra bol sakte hain.
+    <Mantra dev={`ॐ नमो भगवते वासुदेवाय`} rom={`Om namo Bhagavate Vasudevaya`} arth="Bhagwan Vasudev ko namaskar. Yeh Krishna/Vishnu bhakti ka lokpriya mantra hai." />
+  </Step>
+  <Step title="Shringar">
+    Naya vastra pahnayein, chandan ya tilak lagayein, mor-pankh, mukut aur bansuri se shringar karein. Phool-mala arpit karein.
+  </Step>
+  <Step title="Bhog">
+    Makhan-mishri, panjiri, fal aur mithai ka bhog lagayein. Krishna ji ke bhog mein tulsi dal rakhna prachlit hai. Bhog ke baad thoda jal chhodein.
+  </Step>
+  <Step title="Aarti">
+    Kapoor ya ghee ki batti se [Aarti Kunj Bihari Ki](/krishna-radha/krishna-ji-ki-aarti-kunj-bihari) gayein, ghanti bajayein. Phir pradakshina karke prasad baantein.
+  </Step>
+  <Step title="Kshama prarthana aur paran">
+    Ant mein kshama prarthana karein. Vrat rakhne waale parivar ke niyam ke anusaar raat ko prasad se ya agle din subah vrat kholte hain. Kab kholna hai, yeh parampara se alag hota hai; apne pandit ji ya bujurg se poochhein.
+  </Step>
 </Steps>
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- **Tithi ki ulajhan:** Kabhi-kabhi ashtami tithi do dino mein padti hai aur alag sampraday alag din manate hain (jaise Smarta aur Vaishnav). Apne parivar ki parampara ya sthaniya mandir ka din dekhein.
+- **Tulsi:** Krishna ji ke bhog mein tulsi dal chadhana prachlit hai, jabki Ganesh puja mein nahi.
+- **Vrat aur sehat:** Agar swasthya theek na ho, bujurg hon ya garbhavati hon to apni sehat ko dekhte hue vrat ka tareeka doctor aur bujurgon se poochh kar tay karein. Vrat zaroori shart nahi, shraddha mukhya hai.
+- **Bhog:** Taza aur saaf bhog lagayein, baad mein prasad ki tarah baant dein.
+- **Samagri ki fikr:** Kuch na mile to jal, tulsi, phool aur makhan-mishri se bhi puja shraddha se poori maani jaati hai.
 
 ## Mahatva aur katha
 
-TODO: short significance, only if relevant
+Katha ke anusaar Mathura ke raja Kans ko bhavishyavani hui thi ki uski behan Devaki ki aathvin santaan uska ant karegi. Kans ne Devaki aur Vasudev ko kaid kar liya. Aathvin santaan ke roop mein Krishna ka janm hua aur Vasudev unhe raat ko Gokul mein Nand-Yashoda ke yahan chhod aaye. Isi liye Krishna ka bachpan Gokul aur Vrindavan mein beeta. Is katha ka bhaav yeh hai ki andhere ke beech bhakti aur dharm ki jyoti ka janm hota hai.
+
+Janmashtami ke anek rang hain: Mathura-Vrindavan mein jhanki aur jhule, Maharashtra aur Gujarat mein dahi handi, aur ghar-ghar mein Laddu Gopal ka janmotsav. Radha ji ke janmotsav ke liye [Radha Ashtami vrat aur puja vidhi](/krishna-radha/radha-ashtami-vrat-puja-vidhi) dekhein. Tyohaar ki sahi tithi ke liye [Hindu festival calendar](/puja-basics/hindu-festival-calendar-2027) aur apne shehar ka panchang dekhein.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Janmashtami ki puja kis samay karni chahiye?">Prachlit roop mein nishita kaal, yaani madhyaratri mein, kyunki Krishna ka janm aadhi raat ko maana jaata hai. Sahi muhurat apne shehar ke panchang se dekhein.</Q>
+  <Q q="Kya Janmashtami ka vrat rakhna zaroori hai?">Vrat parampara hai, anivarya shart nahi. Bahut se log nirjala ya falahar vrat rakhte hain, kuch sirf puja karte hain. Apni sehat aur parivar ki parampara ke hisaab se tay karein.</Q>
+  <Q q="Panjiri ka bhog kyun lagate hain?">Dhaniya ki panjiri Janmashtami ka prachlit prasad hai. Iske peeche ki parampara kshetra ke hisaab se alag batayi jaati hai; kai ghar mein yeh sirf parivarik riwaaj ki tarah chalti hai.</Q>
+  <Q q="Kya Janmashtami par ghar mein Laddu Gopal hone zaroori hain?">Nahi. Krishna ji ki tasveer ya murti se bhi puja ho sakti hai.</Q>
+  <Q q="Vrat kab kholna chahiye?">Yeh parivar aur sampraday ke anusaar alag hai. Kai log raat ko puja ke baad prasad se, kai agle din tithi ke baad kholte hain. Apne pandit ji ya bujurg se poochhein.</Q>
 </FAQ>

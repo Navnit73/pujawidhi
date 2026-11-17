@@ -11,35 +11,108 @@ updated: "2026-11-17"
 priority: "P2"
 related: []
 volume: 5000
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: maha ashtami. Volume bucket: 5000. */}
+Maha Ashtami Navratri aur Durga Puja ka sabse mahatvapurn dinon mein se ek maani jaati hai. Ashtami tithi ko Maa Durga ke Mahagauri roop ka smaran hota hai (Navratri ke nau roopon mein Ashtami par Mahagauri ki puja prachlit hai), aur Bengal ki Durga Puja mein isi din pushpanjali, kumari puja aur sandhi puja hoti hai. Yeh page ghar ke liye saral Ashtami puja ki vidhi deta hai aur sandhi puja ka sankshipt parichay. Muhurat aur tithi apne panchang se dekhein. Parivar ya pandit ji ki parampara ko pradhanta dein.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab", value: "Ashwin shukla Ashtami. Tithi aur muhurat apne shehar ke panchang se dekhein, kyunki Ashtami-Navami ka milan alag-alag shehron mein alag samay par padta hai." },
+  { label: "Kitna samay", value: "Chhoti puja 30-45 minute. Havan aur kanya pujan ke saath 1.5-2 ghante." },
+  { label: "Mukhya karya", value: "Devi ki puja, pushpanjali, kumari puja ya kanya pujan, aarti. Bengal ki parampara mein sandhi puja." },
+  { label: "Vrat", value: "Kai parivar Ashtami ko upvas rakhte hain. Niyam ghar-ghar mein alag hain, bado se poochhein." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri id="maha-ashtami" groups={[
+  { title: "Puja ka saaman", items: [
+    { name: "Maa Durga ki murti ya tasveer", qty: "1" },
+    { name: "Kalash aur jal", qty: "1" },
+    { name: "Diya, ghee ya tel, batti", qty: "2-3" },
+    { name: "Dhoop, agarbatti, kapoor", qty: "1 set" },
+    { name: "Roli, kumkum, chandan, akshat", qty: "thoda" },
+    { name: "Laal phool (gudhal prachlit) aur mala", qty: "yathashakti" },
+    { name: "Laal chunri aur shringar saaman", qty: "1" },
+    { name: "Supari, paan, laung, elaichi", qty: "thoda" },
+  ]},
+  { title: "Naivedya", items: [
+    { name: "Halwa, chana, puri ya parivar ka bhog", qty: "yathashakti" },
+    { name: "Phal aur mithai", qty: "yathashakti" },
+  ]},
+  { title: "Kanya pujan ke liye (agar karna ho)", items: [
+    { name: "Kanya ke liye aasan, chunri ya rumal", qty: "9 ya jitni kanya" },
+    { name: "Upahaar aur dakshina", qty: "yathashakti" },
+  ]},
+  { title: "Sandhi puja aur havan (jahan hota ho)", items: [
+    { name: "Diye (ghee ke), parampara se 108", qty: "108", note: "Sankhya parampara par nirbhar hai, ghar mein kam diye bhi prachlit hain." },
+    { name: "108 kamal ya laal phool", qty: "108", note: "Bengal ki parampara. Ghar mein jitna sambhav ho." },
+    { name: "Havan samagri aur ghee", qty: "yathashakti" },
+  ]},
+]} />
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Subah ki taiyari">
+    Snaan karke saaf, shuddh kapde pehnein. Puja sthal saaf karein, chowki par laal kapda bichayein aur Maa ki murti ya tasveer virajman karein. Kalash pehle se sthapit ho to uski bhi saaf-safai karein. Navratri ke dinon mein kalash sthapana ke liye [Navratri kalash sthapana vidhi](/navratri-devi/navratri-kalash-sthapana-vidhi) dekhein.
+  </Step>
+  <Step title="Aachman aur sankalp">
+    Teen baar aachman karke diya jalayein. Haath mein jal, akshat aur phool lekar Ashtami ki puja ka sankalp lein. Saral roop mein: "Main Maha Ashtami ke din Maa Durga ki puja shraddha se kar raha/rahi hoon. Meri puja sweekar karein." Sankalp ki vistrit vidhi ke liye [puja sankalp kaise lein](/puja-basics/puja-sankalp-kaise-lein) padhein.
+  </Step>
+  <Step title="Dhyan aur avahan">
+    Maa ka dhyan karein aur unka avahan karein.
+    <Mantra dev={`सर्वमङ्गलमाङ्गल्ये शिवे सर्वार्थसाधिके ।
+शरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते ॥`} rom={`Sarvamangal mangalye Shive sarvarth sadhike
+Sharanye Tryambake Gauri Narayani namostu te`} arth="Sabhi mangalon mein mangal rup, kalyanmayi, sabhi prayojan siddh karne waali, sharan dene waali, teen netron wali Gauri Narayani, aapko pranam." />
+    Yeh Durga Saptashati ke prasiddh stuti-shlok mein se ek hai.
+  </Step>
+  <Step title="Shodashopachar ya saral puja">
+    Maa ko aasan, jal, snaan, vastra (chunri), chandan, roli, akshat, phool, dhoop, deep aur naivedya arpit karein. Har upchar ke saath <Mantra dev="ॐ दुं दुर्गायै नमः" rom="Om Dum Durgayai namah" arth="Maa Durga ko namaskar. Yeh ek prachlit sankshipt mantra hai." /> bol sakte hain.
+  </Step>
+  <Step title="Pushpanjali">
+    Haath mein phool lekar Maa ka dhyan karein aur teen baar pushpanjali arpit karein. Bengal ki parampara mein pushpanjali ke mantra pandit ji batate hain. Ghar mein aap upar ke shlok ya Devi stuti ke saath phool arpit kar sakte hain.
+    <Mantra dev={`या देवी सर्वभूतेषु शक्तिरूपेण संस्थिता ।
+नमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः ॥`} rom={`Ya Devi sarvabhooteshu shakti-roopena sansthita
+Namastasyai namastasyai namastasyai namo namah`} arth="Jo Devi sabhi praniyon mein shakti ke roop mein sthit hain, unhe baar-baar pranam." />
+  </Step>
+  <Step title="Kumari puja ya kanya pujan">
+    Kanya ko aadar se bulakar aasan par bithayein, unke charan dhoyein, tilak lagayein, chunri ya rumal dein, bhojan karayein aur dakshina ya upahaar dekar charan chhuyein. Poori vidhi [Kumari puja / kanya pujan vidhi](/durga-maa/kumari-puja-kanya-pujan-vidhi) page par hai.
+  </Step>
+  <Step title="Sandhi puja (jahan hoti ho)">
+    Bengal ki parampara mein Ashtami ke ant aur Navami ke aarambh ke sandhi kaal mein, jise prachlit manyata mein Devi ke Chamunda roop se jodkar dekha jaata hai, vishesh puja hoti hai. Prachlit manyata ke anusar yeh avadhi lagbhag 48 minute ki hoti hai (Ashtami ke antim 24 aur Navami ke pehle 24 minute), aur is dauraan 108 diye jalane aur 108 phool arpit karne ki parampara hai. Iska sahi samay har saal panchang se nikalna padta hai. Ghar mein ise saral roop mein ya pandit ji ke maargdarshan mein karein.
+  </Step>
+  <Step title="Aarti aur kshama prarthana">
+    Ant mein kapoor aur ghee ke diye se aarti karein. [Durga ji ki aarti](/durga-maa/durga-ji-ki-aarti) gayein. Phir bhoolchook ke liye kshama maangein.
+    <Mantra dev={`आवाहनं न जानामि न जानामि विसर्जनम् ।
+पूजां चैव न जानामि क्षमस्व परमेश्वरि ॥`} rom={`Aavahanam na janami na janami visarjanam
+Poojam chaiva na janami kshamasva Parameshwari`} arth="Main na avahan jaanta/jaanti hoon, na visarjan, na puja ki vidhi. He Parameshwari, mujhe kshama karein." />
+    Prasad baant kar khud grahan karein.
+  </Step>
 </Steps>
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- **Tithi ka bhram:** Ashtami aur Navami ka milan har shehar mein alag samay par padta hai. Kisi aur shehar ka muhurat apne liye na maanein, apna panchang dekhein.
+- **Shuddhi:** Puja se pehle snaan aur saaf kapde. Mansik shuddhi aur shraddha ko pradhan maanein.
+- **Naivedya:** Parivar ki parampara ke anusar halwa, chana ya puri banayein. Vrat mein anaaj ya namak ke niyam alag hote hain, bado se pooch lein.
+- **Kanya ke saath vyavhaar:** Kanya ka satkar prem aur aadar se karein. Unki ruchi aur sehat ka dhyan rakhein.
+- **Havan:** Agar ghar mein havan karna ho to hawa ke liye khidki khuli rakhein aur suraksha ka dhyan rakhein.
+- **Vrat ke baare mein:** Yahan koi swasthya salah nahi di gayi hai. Sehat sambandhi chinta ho to doctor se poochhein.
 
 ## Mahatva aur katha
 
-TODO: short significance, only if relevant
+Devi Mahatmya ke anusar Maa Durga ne devtaon ke tej se prakat hokar Mahishasur ka vadh kiya. Bengal ki parampara mein Ashtami aur Navami ke sandhi kaal ko vishesh shakti ka kshan maana jaata hai, aur Chamunda roop ka smaran isi se jodkar kiya jaata hai (Chand-Mund vadh ki katha Devi Mahatmya mein aati hai). Uttar Bharat mein Ashtami ko Mahagauri ki puja aur kanya pujan ka din maana jaata hai. Tyohaar ka poora parichay [Durga Puja kya hai](/durga-maa/durga-puja) mein aur paanch dinon ka kram [Durga Puja ke 5 din](/durga-maa/durga-puja-5-din-shashthi-dashami) mein hai. Nau roopon ke baare mein [Nau Durga ke 9 roop](/navratri-devi/nau-durga-9-roop) padhein.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Maha Ashtami ki puja kis samay karein?">Ashtami tithi ke dauraan. Muhurat apne shehar ke panchang se dekhein. Parivar ki parampara mein jo samay chalta ho, woh bhi maanya hai.</Q>
+  <Q q="Kya Ashtami ko upvas zaroori hai?">Zaroori nahi. Kai parivar upvas rakhte hain aur kai nahi. Apni parampara ya bado ki salah anusar karein.</Q>
+  <Q q="Sandhi puja kya hai?">Bengal ki Durga Puja mein Ashtami ke ant aur Navami ke aarambh ke sandhi kaal ki vishesh puja. Isme 108 diye aur 108 phool arpit karne ki parampara hai. Sahi samay panchang se dekhein.</Q>
+  <Q q="Ashtami aur Navami ek hi din ho to kya karein?">Tithi kshay ya vriddhi ke kaaran aisa ho sakta hai. Apne panchang ya pandit ji se poochhein ki parivar ke liye kaun sa din maanya hoga.</Q>
+  <Q q="Kya Ashtami par kanya pujan karna zaroori hai?">Kai parivar Ashtami ya Navami par kanya pujan karte hain. Yeh shraddha ki parampara hai, apne ghar ke niyam anusar karein.</Q>
 </FAQ>

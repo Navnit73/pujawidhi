@@ -4,6 +4,7 @@ const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      boxShadow: { float: "var(--float-shadow)" },
       colors: {
         bg: "var(--bg)",
         surface: "var(--surface)",
@@ -16,6 +17,9 @@ const config: Config = {
         tulsi: "var(--tulsi)",
         gold: "var(--gold)",
         line: "var(--border)",
+        "line-strong": "var(--border-strong)",
+        card: "var(--card)",
+        "saffron-text": "var(--saffron-text)",
       },
       fontFamily: {
         heading: ["var(--font-heading-l)", "var(--font-heading-d)", "Georgia", "serif"],

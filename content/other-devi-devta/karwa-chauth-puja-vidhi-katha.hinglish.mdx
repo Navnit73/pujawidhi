@@ -11,35 +11,84 @@ updated: "2026-11-17"
 priority: "V"
 related: []
 volume: 0
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: karwa chauth puja vidhi. Volume bucket: not in CSV, validate first. */}
+Karwa Chauth Kartik maas ki Krishna Paksha chaturthi ko manaya jaane waala vrat hai, jo mukhya roop se uttar aur madhya Bharat mein vivahit mahilayen apne pati ki lambi umr aur parivar ke sukh ki kamna se rakhti hain. Vrat chandrodaya (chaand nikalne) ke baad arghya dekar kholte hain. Yeh page prachlit vidhi aur katha ka saar deta hai. Vrat ke niyam parivar aur kshetra ke hisaab se alag hote hain; apni sas, bujurg ya pandit ji ki parampara ko pramukhta dein. Date aur chandrodaya ka samay apne shehar ke panchang se dekhein.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab", value: "Kartik Krishna Paksha chaturthi. Tareekh aur chandrodaya ka samay shehar ke hisaab se alag hota hai, isliye apne shehar ka panchang dekhein." },
+  { label: "Vrat", value: "Parampara mein sooryoday se chandrodaya tak nirjala vrat. Kai parivar falahar ya jal ki chhoot dete hain; sehat ke anusaar bujurgon aur doctor se poochhein." },
+  { label: "Sargi", value: "Sas dwara vrat ke din bhor mein di jaane wali bhojan-samagri; yeh kshetriya parampara hai." },
+  { label: "Puja", value: "Shaam ko Karva mata ki katha, Shiv-Parvati aur Ganesh ka smaran, karva (mitti ka lota) ki puja, chandrodaya par arghya." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri groups={[
+  { title: "Puja ke liye", items: [
+    { name: "Karva (mitti ka lota) aur dhakkan", qty: "2", note: "Kshetra ke hisaab se sankhya alag." },
+    { name: "Karva mata ka chitra ya Shiv-Parvati-Ganesh ki tasveer", qty: "1" },
+    { name: "Chauki aur saaf kapda", qty: "1" },
+    { name: "Diya, ghee, batti, agarbatti", qty: "1 set" },
+    { name: "Roli, chawal (akshat), haldi, chandan", qty: "thoda" },
+    { name: "Phool, mithai, fal", qty: "yathashakti" },
+  ]},
+  { title: "Shringar aur arghya", items: [
+    { name: "Solah shringar ka saman (sindoor, bindi, chudiyan, mehndi aadi)", qty: "jo ho" },
+    { name: "Chhalni", qty: "1", note: "Chand aur pati ko dekhne ke liye prachlit." },
+    { name: "Arghya ke liye jal ka lota", qty: "1" },
+    { name: "Saas ke liye bayna (vastra, mithai, shringar saman)", qty: "yathashakti", note: "Kshetriya parampara." },
+  ]},
+]} />
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Sargi aur sankalp">
+    Bhor mein sooryoday se pehle sargi grahan karein (jahan parampara ho). Phir vrat ka sankalp lein: "Main apne pati ki dirghayu aur parivar ke sukh ki kamna se Karwa Chauth vrat shraddha se kar rahi hoon." Sankalp ki vidhi [yahan](/puja-basics/puja-sankalp-kaise-lein) dekh sakti hain.
+  </Step>
+  <Step title="Din bhar vrat">
+    Vrat ke din bhajan, path aur ghar ke kaam mein mann lagayein. Sehat ka dhyan rakhein. Garbhavati, bimar ya bujurg mahilayen apni sehat dekhte hue doctor aur bujurgon se poochhkar niyam tay karein. Vrat anivarya shart nahi, shraddha mukhya hai.
+  </Step>
+  <Step title="Shaam ki puja ki taiyari">
+    Shaam ko saj-sanwar kar chauki par Shiv-Parvati, Ganesh aur Karva mata ko virajman karein. Karva mein jal bharkar rakhein aur uski puja ki taiyari karein.
+  </Step>
+  <Step title="Puja aur katha">
+    Pehle Ganesh ji ka smaran karein, phir Shiv-Parvati ki puja karein. Mahilayen ek saath baithkar Karwa Chauth ki katha sunti hain aur karva ka aadan-pradan (parampara ho to) karti hain. Parvati ji se akhand saubhagya ki prarthana ka bhaav hota hai.
+    <Mantra dev={`सर्वमङ्गलमाङ्गल्ये शिवे सर्वार्थसाधिके ।
+शरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते ॥`} rom={`Sarvamangala-mangalye Shive sarvartha-sadhike
+Sharanye Tryambake Gauri Narayani namo'stu te`} arth="Sabka mangal karne waali, sab karya siddh karne waali sharan-daayini Gauri (Parvati) ko namaskar. Yeh prachlit stuti shlok hai; kshetra mein alag mantra bhi bolte hain." />
+  </Step>
+  <Step title="Chandrodaya aur arghya">
+    Chand nikalne par chhalni se chand ko dekhein, phir usi chhalni se pati ko dekhein. Chand ko jal ka arghya dein. Pati ke haath se jal grahan karke vrat kholne ki parampara hai.
+  </Step>
+  <Step title="Paran">
+    Pati ke haath se jal pikar aur mithai khakar vrat kholein. Phir bhojan karein aur bujurgon ka ashirvad lein.
+  </Step>
 </Steps>
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- **Chandrodaya ka samay:** Shehar ke hisaab se alag hota hai. Kisi gair-bharosemand message par nahi, panchang ya sthaniya official source par dhyan dein.
+- **Sehat ka dhyan:** Lambe nirjala vrat se kamzori ho sakti hai. Madhumeh, garbhavastha ya kisi bimari mein doctor ki salah lein. Kai parivar ek aasan roop (jal ya falahar ki chhoot) ke saath vrat nibhate hain.
+- **Parivar ki parampara:** Sargi, bayna, karva ki sankhya aur katha ke roop kshetra ke hisaab se alag hote hain.
+- **Dabav nahi:** Kisi par vrat ka dabav na daalein. Pati bhi saath mein vrat rakh sakte hain, yeh bhi aajkal prachlit hai.
 
 ## Mahatva aur katha
 
-TODO: short significance, only if relevant
+Karwa Chauth ki alag-alag kathaen prachlit hain. Sabse zyada sunayi jaane waali katha mein Veeravati naam ki ek rani ka varnan aata hai jo apne maayke mein pehli baar vrat rakhti hai. Bhookh se vyakul dekh kar bhaiyon ne chhal se chand ka bhram dikha diya. Veeravati ne vrat tod diya aur uske pati ko kasht hua. Baad mein poore niyam se vrat karne par pati ko jeevan wapas mila. Is katha ke roop aur naam alag-alag sources mein thode alag milte hain. Kshetra mein Karva mata aur Savitri-Satyavan jaise prasang bhi sunaye jaate hain. Ganesh smaran ke liye [Ganesh puja vidhi](/ganesh-ji/ganesh-puja-vidhi) dekh sakti hain. Doosre tyoharon ka kram [Hindu festival calendar](/puja-basics/hindu-festival-calendar-2027) mein dekhein.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Karwa Chauth kab hai?">Kartik Krishna Paksha chaturthi ko. Is saal ki sahi tareekh aur chandrodaya ka samay apne shehar ke panchang se dekhein.</Q>
+  <Q q="Kya Karwa Chauth mein paani pee sakte hain?">Parampara mein nirjala vrat hota hai, par kai parivar sehat ke anusaar jal ya falahar ki chhoot dete hain. Apni sehat ke hisaab se doctor aur bujurgon se poochhein.</Q>
+  <Q q="Sargi kya hoti hai?">Sooryoday se pehle sas dwara di jaane wali bhojan-samagri (jaise phal, mithai, mathri) jise vrat shuru karne se pehle khaya jata hai. Yeh kshetriya parampara hai.</Q>
+  <Q q="Chhalni se chand kyun dekhte hain?">Yeh prachlit parampara hai ki chhalni se pehle chand aur phir pati ko dekha jaata hai. Iske peeche ke kaaran alag-alag batayi jaati hain.</Q>
+  <Q q="Kya pati bhi vrat rakh sakte hain?">Haan, aajkal bahut se jode saath mein vrat rakhte hain. Yeh parivar ki marzi aur parampara par nirbhar hai.</Q>
+  <Q q="Kya vrat se pati ki lambi umr ki guarantee hoti hai?">Nahi. Vrat shraddha aur sambandh ke prati samarpan ka roop hai. Is site par kisi parinaam ka vaada nahi kiya jaata.</Q>
 </FAQ>

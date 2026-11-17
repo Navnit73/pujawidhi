@@ -11,35 +11,99 @@ updated: "2026-11-17"
 priority: "V"
 related: []
 volume: 0
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: lakshmi ganesh puja. Volume bucket: not in CSV, validate first. */}
+Diwali ki raat Maa Lakshmi aur Ganesh ji ki saath puja ki jaati hai. Ganesh ji ko vighnaharta aur buddhi ke data ke roop mein, aur Lakshmi ji ko samriddhi aur shubhta ki devi ke roop mein poojte hain. Yeh page ghar ke liye ek saral aur poori vidhi deta hai. Puja ka kram parivar, kshetra aur paddhati (jaise Maharashtra, Gujarat, Bengal ya Marwari parivar) ke anusaar badalta hai, isliye yahan **prachlit roop** diya gaya hai. Aapke ghar mein jo vidhi chali aa rahi hai, use hi pradhanta dein.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab", value: "Diwali ki raat, Kartik Amavasya ke din. Shubh muhurat (aam taur par Pradosh kaal ya sthir lagna) aapke shehar ke panchang se dekhein. Hum yahan koi samay nahi de rahe." },
+  { label: "Kitna samay", value: "Chhoti puja 30-40 minute. Poori vidhi 1 se 1.5 ghanta." },
+  { label: "Kya chahiye", value: "Lakshmi-Ganesh ki murti ya tasveer, kalash, kamal ya laal phool, kheel-batashe, mithai, diye, jal, roli, akshat." },
+  { label: "Disha", value: "Puja karne waale purv ya uttar ki or munh kar sakte hain. Murti ko saaf chowki par laal ya peele kapde par virajman karein." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri id="lakshmi-ganesh-puja" groups={[
+  { title: "Zaroori", items: [
+    { name: "Lakshmi-Ganesh ki murti ya tasveer", qty: "1 joda", note: "Parampara mein Lakshmi ji Ganesh ji ke daayein virajman ki jaati hain." },
+    { name: "Chowki aur laal ya peela kapda", qty: "1" },
+    { name: "Kalash (jal, aam ke patte, nariyal)", qty: "1" },
+    { name: "Diye, ghee ya sarson ka tel, batti", qty: "5, 11 ya 21", note: "Sankhya parivar ke anusaar." },
+    { name: "Roli, akshat, haldi, chandan", qty: "thoda" },
+    { name: "Agarbatti aur dhoop", qty: "1 packet" },
+    { name: "Mauli (kalawa)", qty: "1" },
+  ]},
+  { title: "Arpan ke liye", items: [
+    { name: "Kamal ya laal-gulabi phool, mala", qty: "yathashakti" },
+    { name: "Durva", qty: "21 gaanth", note: "Ganesh ji ke liye. Na mile to jitna mile." },
+    { name: "Kheel aur batashe", qty: "1 katori" },
+    { name: "Mithai aur phal", qty: "yathashakti" },
+    { name: "Supari, paan, laung, elaichi", qty: "thoda" },
+    { name: "Sikke aur dakshina", qty: "yathashakti" },
+  ]},
+  { title: "Aarti ke liye", items: [
+    { name: "Kapoor aur aarti ki thali", qty: "1" },
+    { name: "Ghanti", qty: "1" },
+  ]},
+]} />
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Safai aur taiyari">
+    Puja se pehle ghar ki safai karein aur dwar par rangoli banayein. Snaan karke saaf, shubh rang ke kapde pehnein. Chowki par kapda bichayein aur Lakshmi-Ganesh ko virajman karein. Kalash ko paas mein rakhein. Diye aur samagri pehle se taiyar rakhein.
+  </Step>
+  <Step title="Aachman aur sankalp">
+    Daayein haath mein jal lekar teen baar aachman karein. Phir haath mein jal, akshat aur phool lekar apna naam, gotra aur sthan bolte hue sankalp lein ki aap Lakshmi-Ganesh ki puja shraddha ke saath kar rahe hain. Sankalp ke shabd pandit ji se ya apni parivar-parampara se lein.
+  </Step>
+  <Step title="Ganesh puja pehle">
+    Har puja ki tarah pehle Ganesh ji ka avahan karein, roli-akshat-durva arpit karein aur modak ya mithai ka bhog lagayein.
+    <Mantra dev={`वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।
+निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥`} rom={`Vakratund mahakaya suryakoti samaprabha
+Nirvighnam kuru me deva sarvakaryeshu sarvada`} arth="He vakratund, mahakaay, karodon suryon ke tej waale Ganesh dev, mere sabhi kaaryon mein hamesha vighna door kijiye." />
+    Ganesh puja ka vistaar [Ganesh puja vidhi](/ganesh-ji/ganesh-puja-vidhi) mein hai.
+  </Step>
+  <Step title="Kalash aur Lakshmi ji ka avahan">
+    Kalash mein jal, akshat aur sikka daalkar uspar aam ke patte aur nariyal rakhein. Phir Lakshmi ji ka dhyan karte hue avahan karein aur aasan arpit karein.
+    <Mantra dev={`ॐ श्रीं ह्रीं श्रीं कमले कमलालये प्रसीद प्रसीद ।
+ॐ श्रीं ह्रीं श्रीं महालक्ष्म्यै नमः ॥`} rom={`Om shreem hreem shreem kamale kamalalaye praseed praseed
+Om shreem hreem shreem Mahalakshmyai namah`} arth="Yeh Lakshmi ji ka prachlit bija-mantra hai. Bhaav hai: he kamal par virajman Lakshmi, prasann hoiye. Mahalakshmi ko pranam." />
+  </Step>
+  <Step title="Snaan, vastra aur shringar">
+    Lakshmi ji ko jal (ya panchamrit) se snaan karayein, phir saaf jal se shuddh karein. Vastra, mauli, roli, chandan, kamal ya laal phool aur mala arpit karein. Dhoop aur diya dikhayein.
+  </Step>
+  <Step title="Bhog aur paath">
+    Kheel-batashe, mithai aur phal ka naivedya arpit karein. Phir [Shri Suktam](/lakshmi-vishnu/shri-suktam-path-vidhi) ya Lakshmi ji ke naam ka jaap karein. Jo paath aap ghar mein karte aaye hain, wahi karein.
+    <Mantra dev={`ॐ महालक्ष्म्यै नमः ॥`} rom={`Om Mahalakshmyai namah`} arth="Mahalakshmi ko pranam. Apni shraddha ke anusaar 11 ya 108 baar jaap kar sakte hain." />
+  </Step>
+  <Step title="Aarti">
+    Pehle [Ganesh ji ki aarti](/ganesh-ji/ganesh-ji-ki-aarti), phir [Lakshmi ji ki aarti](/lakshmi-vishnu/lakshmi-ji-ki-aarti) gayein. Chahein to ant mein [Vishnu ji ki aarti](/lakshmi-vishnu/vishnu-ji-ki-aarti) bhi gayein. Aarti ke baad prasad baantein aur ghar ke dwar, tulsi ke paas aur anya jagah diye jalayein.
+  </Step>
 </Steps>
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- Muhurat yaad rakhein: panchang se apne shehar ka samay dekhein, kisi aur shehar ka samay na lein.
+- Ganesh ji ki puja pehle karein, uske baad Lakshmi ji ki. Is kram ko aksar pratha mein maana jaata hai.
+- Murti ya tasveer ko saaf aur uchit jagah par rakhein. Puja ke baad diyon ko surakshit jagah par rakhein, parde aur kaaghaz se door.
+- Pooja ka dikhava ya mehngi samagri zaroori nahi hai. Shraddha aur saf-safai mukhya hai.
+- Bachche aur buzurg hon to patakhe aur diyon ke saath surakshit tareeke apnayein.
 
 ## Mahatva aur katha
 
-TODO: short significance, only if relevant
+Diwali ke din Lakshmi puja ka sambandh Kartik Amavasya ki raat se jodkar bataya jaata hai, jab ghar saaf karke diye jalaye jaate hain aur Lakshmi ji ka swagat kiya jaata hai. Kai kshetron mein ise Ram ji ke Ayodhya lautne se bhi jodkar manaya jaata hai. Sabke apne-apne vishwas hain, isliye hum koi ek katha nishchit roop se nahi kehte. Ganesh ji ki saath puja isliye hoti hai ki parampara mein Ganesh ji ko har shubh kaam ke aarambh mein poojna maana jaata hai.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Lakshmi puja ka sahi samay kya hai?">Sahi samay aapke shehar ke panchang par nirbhar karta hai, aur aam taur par Pradosh kaal ya sthir lagna ko shubh maana jaata hai. Hum koi tay samay nahi bata rahe. Kripya panchang ya apne pandit ji se poochein.</Q>
+  <Q q="Kya Lakshmi aur Ganesh ki murti saath rakhni chahiye?">Haan, aam parampara mein dono ki saath puja hoti hai, aur Ganesh ji ki puja pehle ki jaati hai. Murti ke sthaan ka kram parivar ke anusaar alag ho sakta hai.</Q>
+  <Q q="Kya puja pandit ji se karwana zaroori hai?">Zaroori nahi hai. Ghar par apni shraddha se bhi puja ho sakti hai. Pandit ji ho to sankalp aur mantron mein madad milti hai.</Q>
+  <Q q="Kya Lakshmi puja mein Saraswati aur Kuber ki bhi puja hoti hai?">Kai parivaron mein, khaaskar vyapaari parivaron mein, bahi-khata, kalam aur Kuber ki bhi puja ki jaati hai. Yeh parampara alag-alag hai, isliye apne parivar ki riti dekhein.</Q>
+  <Q q="Samagri ki poori list kahan milegi?">[Puja samagri master list](/puja-basics/puja-samagri-master-list) mein poori samagri ka sankalan hai. Wahan se aap apni zarurat ki list bana sakte hain.</Q>
 </FAQ>

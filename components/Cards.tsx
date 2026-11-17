@@ -30,7 +30,7 @@ export function CategoryCard({ lang, category, count }: { lang: Lang; category: 
   const t = T[lang];
   return (
     <article className="card card-accent flex flex-col" style={{ "--accent": category.accent } as React.CSSProperties}>
-      <span className="mb-3 grid h-12 w-12 place-items-center rounded-2xl" style={{ background: `${category.accent}1f`, color: category.accent }}><DeityIcon name={category.icon} /></span>
+      <span className="icon-chip mb-4 h-14 w-14 rounded-2xl" style={{ "--chip": category.accent } as React.CSSProperties}><DeityIcon name={category.icon} /></span>
       <h3 className="font-heading text-xl text-ink">{category.name[lang]}</h3>
       <p className="mt-1 text-muted">{category.short[lang]}</p>
       <div className="mt-auto pt-4">
@@ -47,7 +47,7 @@ export function PageCard({ lang, page }: { lang: Lang; page: PageMeta }) {
   return (
     <article className="card card-accent flex flex-col" style={{ "--accent": cat.accent } as React.CSSProperties}>
       <div className="mb-3 flex items-center gap-3">
-        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl" style={{ background: `${cat.accent}1f`, color: cat.accent }}><DeityIcon name={cat.icon} size={22} /></span>
+        <span className="icon-chip h-11 w-11 shrink-0 rounded-xl" style={{ "--chip": cat.accent } as React.CSSProperties}><DeityIcon name={cat.icon} size={22} /></span>
         <span className="badge">{TYPE_LABEL[page.type]?.[lang] ?? page.type}</span>
         {soon && <span className="badge">{lang === "hi" ? "जल्द आ रहा है" : "Jald aa raha hai"}</span>}
       </div>

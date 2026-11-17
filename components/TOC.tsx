@@ -34,9 +34,9 @@ export function TOC({ headings, title, variant }: { headings: { id: string; text
   );
   if (variant === "mobile") {
     return (
-      <details ref={mobile} className="sticky top-0 z-40 -mx-4 border-b border-line bg-bg px-4 lg:hidden no-print">
+      <details ref={mobile} className="nav-float sticky top-[5.25rem] z-40 rounded-2xl px-4 lg:hidden no-print">
         <summary className="flex min-h-[48px] cursor-pointer items-center font-semibold text-tulsi">{title}</summary>
-        <div className="max-h-[60vh] overflow-auto pb-3">{list(() => mobile.current?.removeAttribute("open"))}</div>
+        <div className="max-h-[min(60dvh,26rem)] overflow-auto pb-3">{list(() => mobile.current?.removeAttribute("open"))}</div>
       </details>
     );
   }

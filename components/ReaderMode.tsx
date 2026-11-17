@@ -56,7 +56,15 @@ export function ReaderOverlay({ verses, title, lang, onClose }: { verses: Reader
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     dialog.current?.focus();
-    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") return onClose();
+      if (e.key !== "Tab" || !dialog.current) return;
+      const f = [...dialog.current.querySelectorAll<HTMLElement>("button, select, input, [tabindex]:not([tabindex='-1'])")].filter((x) => !x.hasAttribute("disabled"));
+      if (!f.length) return;
+      const first = f[0], last = f[f.length - 1], active = document.activeElement;
+      if (e.shiftKey && (active === first || active === dialog.current)) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && active === last) { e.preventDefault(); first.focus(); }
+    };
     window.addEventListener("keydown", onKey);
     return () => { document.body.style.overflow = prev; window.removeEventListener("keydown", onKey); };
   }, [onClose]);
@@ -74,7 +82,7 @@ export function ReaderOverlay({ verses, title, lang, onClose }: { verses: Reader
         <button type="button" onClick={onClose} className={ctl} style={{ borderColor: border }}>✕ {t.close}</button>
         <button type="button" onClick={() => setPaused((p) => !p)} className={ctl} style={{ borderColor: border }} aria-pressed={paused}>{live ? `⏸ ${t.pause}` : `▶ ${t.play}`}</button>
         <label className="flex items-center gap-2 text-sm" style={{ color: muted }}>{t.speed}
-          <input type="range" min={0} max={10} step={1} value={speed} onChange={(e) => { setSpeed(+e.target.value); if (+e.target.value > 0) setPaused(false); }} aria-valuetext={speed === 0 ? t.off : String(speed)} className="h-11 w-28 accent-[#f28c0f]" />
+          <input type="range" min={0} max={10} step={1} value={speed} onChange={(e) => { setSpeed(+e.target.value); if (+e.target.value > 0) setPaused(false); }} aria-valuetext={speed === 0 ? t.off : String(speed)} className="h-11 w-28 accent-[#c2410c]" />
         </label>
         <div className="flex items-center gap-1" role="group" aria-label={t.font}>
           <button type="button" className={ctl} style={{ borderColor: border }} onClick={() => setSize((s) => Math.max(20, s - 2))} aria-label={`${t.font} −`}>A−</button>

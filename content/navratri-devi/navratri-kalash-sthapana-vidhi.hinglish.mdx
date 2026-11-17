@@ -11,35 +11,103 @@ updated: "2026-11-17"
 priority: "P4"
 related: []
 volume: 50
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: navratri kalash puja. Volume bucket: 50. */}
+Navratri ki shuruaat kalash sthapana (ghatasthapana) se hoti hai. Kalash ko Devi ka roop aur sabhi devi-devtaon ke nivas ka pratik maana jaata hai, isliye Pratipada ke din sabse pehle ise vidhi-purvak sthapit kiya jaata hai. Is page par samagri, steps, muhurat ke baare mein sahi tareeka aur aam galtiyan saaf bhasha mein di gayi hain. Parampara aur kshetra ke hisaab se tareeke thode badalte hain, isliye jo aapke parivar mein chalta hai wahi apnayein. Yahan **prachlit roop** diya gaya hai.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab", value: "Navratri ki Pratipada tithi par. Muhurat apne shehar ke panchang se dekhein, kyunki samay shehar ke hisaab se badalta hai." },
+  { label: "Kitna samay", value: "Lagbhag 30-45 minute." },
+  { label: "Kya chahiye", value: "Kalash, jau, saaf mitti, jal, nariyal, aam ke patte, supari, sikka, mauli, roli, akshat." },
+  { label: "Disha", value: "Aam taur par ghar ka ishaan kon (uttar-purv). Puja karne waala purv ya uttar ki taraf munh kare." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri groups={[
+  { title: "Kalash ke liye", items: [
+    { name: "Kalash (mitti, tamba ya peetal)", qty: "1", note: "Parivar ki parampara anusaar." },
+    { name: "Saaf jal aur thoda Gangajal", qty: "kalash bharne ke liye" },
+    { name: "Supari", qty: "1" },
+    { name: "Sikka", qty: "1", note: "Yathashakti, koi bhi sikka." },
+    { name: "Akshat (saabut chawal)", qty: "1 mutthi" },
+    { name: "Aam ke patte (ya ashok ke)", qty: "5 ya 7" },
+    { name: "Jata wala nariyal", qty: "1" },
+    { name: "Laal chunri ya laal kapda", qty: "1" },
+    { name: "Mauli (kalawa)", qty: "1" },
+  ]},
+  { title: "Jau (jwara) ke liye", items: [
+    { name: "Mitti ka chauda patra ya thali", qty: "1" },
+    { name: "Saaf mitti", qty: "patra anusaar" },
+    { name: "Jau", qty: "1 mutthi", note: "Kuch parivar saptadhanya bhi bote hain." },
+  ]},
+  { title: "Puja ke liye", items: [
+    { name: "Chowki aur laal ya peela kapda", qty: "1" },
+    { name: "Roli, chandan, sindoor", qty: "thoda" },
+    { name: "Durva, phool, haar", qty: "thode" },
+    { name: "Diya, ghee, batti, kapoor, agarbatti", qty: "1 set" },
+    { name: "Naivedya (phal, mithai)", qty: "yathashakti" },
+  ]},
+]} />
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Muhurat aur taiyari">
+    Pratipada ke din subah snaan karke saaf kapde pehnein. Puja sthaan ko saaf karke chowki rakhein. Kalash sthapana muhurat apne shehar ke panchang se dekhein. Kuch panchang mein Chitra nakshatra aur Vaidhriti yog ke dauraan sthapana na karne ki salaah milti hai aur us sthiti mein alag samay bataya jaata hai. Is baare mein pandit ji ya panchang ki baat maanein, hum apni taraf se samay nahi bata rahe.
+  </Step>
+  <Step title="Jau ka patra taiyar karna">
+    Chauda patra lekar usme saaf mitti ki ek parat bichayein, jau daalein, phir mitti aur jau ki ek aur parat. Halka sa jal chhidkein. Is patra ko chowki par ya Devi ke saamne rakhein. Yeh jau nau din mein ugkar hariyali ban jaate hain, jise shubh maana jaata hai.
+  </Step>
+  <Step title="Ganesh ji ka smaran aur sankalp">
+    Pehle Ganesh ji ka smaran karein. Phir haath mein jal, akshat aur phool lekar apna naam, gotra (agar pata ho), sthaan aur tithi bolte hue sankalp lein. Saral roop: "Main Navratri mein kalash sthapana karke Maa Durga ki puja shraddha se karne ka sankalp leta/leti hoon."
+  </Step>
+  <Step title="Kalash ko bharna">
+    Kalash ke gale par mauli bandhein aur roli se swastik banayein. Kalash mein saaf jal bharein, usme thoda Gangajal, supari, sikka aur akshat daalein.
+    <Mantra dev={`कलशस्य मुखे विष्णुः कण्ठे रुद्रः समाश्रितः ।
+मूले तत्र स्थितो ब्रह्मा मध्ये मातृगणाः स्मृताः ॥`} rom={`Kalashasya mukhe Vishnuh kanthe Rudrah samashritah
+Moole tatra sthito Brahma madhye matri-ganah smritah`} arth="Kalash ke mukh mein Vishnu, kanth mein Rudra, mool mein Brahma aur beech mein matri-shaktiyon ka vaas maana jaata hai." />
+  </Step>
+  <Step title="Kalash ki sthapana">
+    Jau ke patra ke beech mein ya uske upar kalash ko sthapit karein. Kalash ke mukh par aam ke patte rakhein. Nariyal par laal chunri lapetkar mauli bandhein aur use patton ke upar kalash ke mukh par rakhein, nariyal ka jata wala sira upar ho. Dhyan rakhein ki kalash hilne na paaye.
+  </Step>
+  <Step title="Devi ka avahan aur puja">
+    Kalash mein Devi aur sabhi devtaon ka avahan karein.
+    <Mantra dev={`ॐ जयन्ती मङ्गला काली भद्रकाली कपालिनी ।
+दुर्गा क्षमा शिवा धात्री स्वाहा स्वधा नमोऽस्तु ते ॥`} rom={`Om Jayanti Mangala Kali Bhadrakali Kapalini
+Durga Kshama Shiva Dhatri Swaha Swadha namostu te`} arth="Jayanti, Mangala, Kali, Bhadrakali, Kapalini, Durga, Kshama, Shiva, Dhatri, Swaha aur Swadha roop mein vidyamaan Devi, aapko namaskar hai." />
+    Phir kalash par roli, chandan, akshat, phool aur durva chadhayein, dhoop-deep dikhayein aur naivedya arpit karein. Iske baad Devi ki murti ya tasveer ki puja [Navratri puja vidhi](/navratri-devi/navratri-puja-vidhi) ke anusaar karein.
+  </Step>
+  <Step title="Jyot aur aarti">
+    Diya jalayein. Kai ghar mein nau din ki akhand jyot rakhi jaati hai. Yeh anivaarya nahi hai. Aarti karein aur prasad baantein.
+  </Step>
+  <Step title="Roz ki dekhbhaal">
+    Roz subah-shaam jau ke patra par thoda jal chhidkein. Kalash ko nau din saaf jagah rakhein. Hilayein ya hataayein nahi. Roz diya jalayein aur puja ke baad Devi ko pranam karein.
+  </Step>
 </Steps>
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- **Muhurat ko lekar ghabrahat:** Agar muhurat nikal jaaye, to pandit ji ya panchang mein diya vaikalpik samay dekhein. Apni taraf se samay na maan lein.
+- **Nariyal ka sira:** Nariyal ka jata wala hissa upar rakhne ki parampara hai. Parivar ki parampara alag ho sakti hai.
+- **Mitti ka kalash:** Mitti ke kalash mein jal rakhne par dhyan rakhein ki risaav na ho. Kalash ke neeche thali ya patra rakhein.
+- **Jau na ugein to:** Dhyan rakhein ki jau ko halka jal milta rahe aur dhoop ya thand zyada na ho. Phir bhi na ugein to ghabrayein nahi. Yeh sirf pratik hai, apne aap mein koi sanket nahi maana jaata.
+- **Shuddhta:** Kalash ko chhuyen to haath saaf hon. Kalash ke paas zyada samay shaant rahein.
 
 ## Mahatva aur katha
 
-TODO: short significance, only if relevant
+Kalash ko poornata aur mangal ka pratik maana jaata hai. Kalash mein jal Varun devta ka aur patte tatha nariyal prakriti aur sampannata ke pratik hain. Navratri ke shuru mein kalash sthapana ke saath hum nau din Devi ko ghar mein virajman maante hain. Jau ka ugna hariyali aur nayi shuruaat ka pratik hai. Yeh page vishwas aur parampara ke baare mein jaankari ke liye hai.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Kalash sthapana ka sahi samay kya hai?">Yeh shehar aur saal ke hisaab se badalta hai. Pratipada ke din apne shehar ke panchang ya pandit ji se muhurat dekhein. Hum koi nishchit samay nahi bata rahe.</Q>
+  <Q q="Kya kalash mein jal ya Gangajal daalna zaroori hai?">Saaf jal daalna prachlit hai. Gangajal agar ho to thoda milana shubh maana jaata hai. Na ho to saaf jal se bhi sthapana ho jaati hai.</Q>
+  <Q q="Kya kalash ka nariyal baad mein khaa sakte hain?">Navratri ke baad kalash ka nariyal prasad ke roop mein baantne ki parampara bhi hai, aur kuch parivar use jal mein pravahit karte hain. Apne parivar ya pandit ji se poochhein.</Q>
+  <Q q="Jau kitne din mein ugte hain?">Aam taur par ek-do din mein ankur dikhne lagte hain, par yeh mausam par nirbhar hai. Ugne ki sankhya ya rang se koi nishchit fal na jodein.</Q>
+  <Q q="Kalash sthapana ke baad ghar khali chhod sakte hain?">Roz ki puja aur diya ke liye kisi ka rehna accha hota hai. Jaruri bahar jaana pade to pehle pandit ji ya bade se poochhein aur sthiti anusaar vyavastha karein.</Q>
 </FAQ>

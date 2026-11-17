@@ -48,7 +48,7 @@ export function PrintSheet({ lang }: { lang: Lang }) {
           <label className="grid gap-1 text-sm font-semibold">{hi ? "लिपि" : "Lipi"}
             <select className="min-h-[44px] rounded-xl border border-line bg-surface px-3" value={script} onChange={(e) => setScript(e.target.value as typeof script)}><option value="both">{hi ? "दोनों" : "Dono"}</option><option value="dev">{hi ? "देवनागरी" : "Devanagari"}</option><option value="rom">Hinglish</option></select></label>
           <label className="grid gap-1 text-sm font-semibold">{hi ? "फ़ॉन्ट" : "Font"} ({size}px)
-            <input type="range" min={16} max={34} value={size} onChange={(e) => setSize(+e.target.value)} className="h-11 accent-[#f28c0f]" /></label>
+            <input type="range" min={16} max={34} value={size} onChange={(e) => setSize(+e.target.value)} className="h-11 accent-[#c2410c]" /></label>
         </div>
         <div className="flex flex-wrap items-center gap-3">
           <button type="button" className="btn btn-primary" disabled={!picked.length} onClick={() => printBlock(sheet.current)}>🖨 {hi ? "प्रिंट / PDF" : "Print / PDF"}</button>

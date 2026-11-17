@@ -11,35 +11,93 @@ updated: "2026-11-17"
 priority: "P4"
 related: []
 volume: 50
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: ganesh visarjan puja. Volume bucket: 50. */}
+Visarjan Ganesh utsav ka antim charan hai, jab sthapit murti ko shraddha aur prem ke saath vida kiya jaata hai. Yeh page **ghar par visarjan ki saral puja** aur uske baad ki baatein batata hai. Visarjan ka din aur muhurat parivar ki tay ki hui avadhi (1.5, 3, 5, 7 ya 10 din; aam taur par 10 din wala visarjan Anant Chaturdashi par hota hai) aur panchang par nirbhar hai. Muhurat apne shehar ke panchang se dekhein, hum koi samay nahi likhte.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab", value: "Parivar ki tay ki hui avadhi ke antim din. 10 din wale utsav mein aam taur par Anant Chaturdashi. Muhurat panchang se." },
+  { label: "Pehle kya", value: "Uttar puja (antim puja), aarti aur kshama prarthana." },
+  { label: "Kaise", value: "Ghar mein baalti ya tub mein, ya sthaniya prashasan ki vyavastha mein. Saaf jal-strot mein shraddha se." },
+  { label: "Prachlit ghosh", value: "Ganpati Bappa Morya, Pudhchya varshi lavkar ya." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri id="ganesh-visarjan" groups={[
+  { title: "Uttar puja ke liye", items: [
+    { name: "Diya, ghee, batti, kapoor", qty: "1 set" },
+    { name: "Akshat, roli, chandan", qty: "thoda" },
+    { name: "Durva aur laal phool", qty: "yathashakti" },
+    { name: "Modak, laddu ya mithai", qty: "yathashakti" },
+    { name: "Dahi-chawal ya koi saatvik bhog", qty: "thoda", note: "Vida ke bhog ki parampara kuchh kshetron mein hai." },
+    { name: "Aarti ki thali", qty: "1" },
+  ]},
+  { title: "Visarjan ke liye", items: [
+    { name: "Baalti ya tub (ghar mein visarjan ke liye)", qty: "1", note: "Murti ke aakar ke hisaab se." },
+    { name: "Saaf jal", qty: "paryapt" },
+    { name: "Saaf kapda", qty: "1" },
+  ]},
+]} />
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Taiyari">
+    Snaan karke saaf kapde pehnein. Visarjan ke din subah ki roz ki puja aur aarti pehle ki tarah karein. Shaam ya tay muhurat se pehle visarjan ki taiyari karein.
+  </Step>
+  <Step title="Uttar puja">
+    Antim puja ke liye diya jalayein aur Ganesh ji ko durva, phool, tilak aur bhog arpit karein. Pehle ki tarah dhyan karein.
+    <Mantra dev="ॐ गं गणपतये नमः" rom="Om Gan Ganapataye namah" arth="Ganapati ji ko namaskar." />
+    Uttar puja ka kram kul ki parampara aur pandit ji ke anusaar alag hota hai.
+  </Step>
+  <Step title="Aarti">
+    [Ganesh ji ki aarti](/ganesh-ji/ganesh-ji-ki-aarti) ya [Sukhkarta Dukhharta](/ganesh-ji/ganpati-aarti-sukhkarta-dukhharta) gayein. Prasad baantein.
+  </Step>
+  <Step title="Visarjan ka sankalp aur prarthana">
+    Ganesh ji se prarthana karein ki woh puja swikar karein aur agle varsh phir aayein. Prachlit mantra:
+    <Mantra dev={`यान्तु देवगणाः सर्वे पूजामादाय पार्थिवीम् ।
+इष्टकामसमृद्ध्यर्थं पुनरागमनाय च ॥`} rom={`Yantu devaganah sarve poojamadaya parthivim
+Ishtakama-samriddhyartham punaragamanaya cha`} arth="Sabhi devgan meri di hui puja swikar karke apne-apne sthaan par jaayein, aur hamari ishta kamnaon ki samriddhi ke liye phir aane ke liye." />
+    Yeh ek prachlit visarjan shlok hai. Alag parivaron mein alag mantra ya shlok chalte hain.
+  </Step>
+  <Step title="Murti ko le jana">
+    Murti ko saavdhani se uthayein. Bhakti ke saath "Ganpati Bappa Morya" ke ghosh karte hue le jaayein. Ghar mein visarjan ho to baalti ya tub mein saaf jal bhar kar murti ko dheere se sthapit karein.
+  </Step>
+  <Step title="Visarjan">
+    Murti ko dheere se jal mein pravahit karein. Mitti ki murti ho to woh dheere-dheere ghul jaati hai. Ghar mein visarjan kiya ho to ghule hue mitti aur jal ko kisi gamle, bagiche ya ped ke paas shraddha se dalne ki parampara hai. Is baare mein sthaniya nagar-nigam ke nirdesh dekhein.
+  </Step>
+  <Step title="Kshama prarthana">
+    Ant mein kshama prarthana karein.
+    <Mantra dev={`आवाहनं न जानामि न जानामि विसर्जनम् ।
+पूजां चैव न जानामि क्षमस्व परमेश्वर ॥`} rom={`Aavahanam na jaanami na jaanami visarjanam
+Poojam chaiva na jaanami kshamasva Parameshwar`} arth="Main na avahan jaanta hoon, na visarjan, na puja ki vidhi. Mujhse jo bhool hui ho, use kshama karein." />
+  </Step>
 </Steps>
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- **Muhurat:** Visarjan ka samay panchang aur sthaniya vyavastha se dekhein.
+- **Paryavaran:** Prachlit parampara mein mitti ki murti hi chuni jaati hai. Plastic, thermocol ya rasayanik rang wali murti ko jal-strot mein na dalein. Prashasan ki nirdeshit jagah ya kritrim kund ka upyog karein.
+- **Puja ka saman:** Phool, mala aur durva ko plastic ki thaili mein jal mein na dalein. Unhe alag se khaad ke roop mein ya sthaniya nirdesh ke anusaar nipatayein.
+- **Bheed aur suraksha:** Bade jaloos aur ghat par bheed ho sakti hai. Bachchon ka dhyan rakhein, gehre paani se door rahein aur sthaniya prashasan ke nirdesh maanein.
+- **Shraddha:** Visarjan ko udasi ke bajaye vida aur agle varsh ke aagman ke bhav se karein.
+- **Parampara:** Kshetra, parivar aur sthapna ki avadhi ke hisaab se visarjan ki rasam alag hoti hai.
 
 ## Mahatva aur katha
 
-TODO: short significance, only if relevant
+Hindu manyata mein murti mein pran pratishtha ke baad visarjan ke saath devta ko wapas apne dham bhejne ka bhav hota hai. Prakriti se bani murti ka prakriti mein wapas milna jeevan ke chakra ka pratik maana jaata hai. Ganesh visarjan ke saath "Pudhchya varshi lavkar ya" (agle varsh jaldi aana) ki prarthana ki jaati hai. Sthapna ke dinon ki vidhi ke liye [Ganesh Chaturthi puja vidhi](/ganesh-ji/ganesh-chaturthi-puja-vidhi) dekhein. Yeh page vishwas aur parampara ki jaankari ke liye hai.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Ganesh visarjan kab karna chahiye?">Parivar ki tay ki hui avadhi ke antim din, jaise 1.5, 3, 5, 7 ya 10 din. 10 din wale utsav mein aam taur par Anant Chaturdashi par hota hai. Muhurat apne shehar ke panchang se dekhein.</Q>
+  <Q q="Kya visarjan ghar par ho sakta hai?">Haan. Baalti ya tub mein saaf jal mein mitti ki murti ka visarjan ghar par kiya ja sakta hai. Mitti aur jal ko shraddha se gamle ya ped ke paas dalne ki parampara hai.</Q>
+  <Q q="Visarjan se pehle kya puja karein?">Uttar puja: diya, durva-phool, bhog aur aarti, phir kshama prarthana. Kram kul ki parampara se alag ho sakta hai, isliye pandit ji ki salah lein.</Q>
+  <Q q="Visarjan ka koi mantra hai?">Prachlit shlok upar diya gaya hai ("Yantu devaganah sarve..."). Alag parivaron mein alag shlok chalte hain.</Q>
+  <Q q="Murti toot jaye ya poora visarjan na ho paye to?">Mitti ki murti dheere-dheere ghulti hai. Zaroorat ho to murti ko sthir rakhkar zyada jal mein ruke rehne dein. Kuch shanka ho to pandit ji se poochhein.</Q>
 </FAQ>

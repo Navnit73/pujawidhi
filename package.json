@@ -11,7 +11,8 @@
     "prebuild": "tsx scripts/check-content.ts && tsx scripts/build-index.ts",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "publish:pages": "tsx scripts/publish.ts"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

@@ -11,35 +11,113 @@ updated: "2026-11-17"
 priority: "V"
 related: []
 volume: 0
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: saraswati puja. Volume bucket: not in CSV, validate first. */}
+Maa Saraswati vidya, vani, sangeet aur kala ki devi maani jaati hain. Unki mukhya puja **Basant Panchami** (Magh maas ki Shukla Paksha panchami) par hoti hai. Vidyarthi, shikshak, sangeetkar aur kalakar is din apni kitaabein, vadya aur upkaran Maa ke saamne rakhkar puja karte hain. Yeh page ghar ke liye saral aur prachlit vidhi deta hai. Bengal, Odisha, Bihar aur anya kshetron mein puja ke tareeke aur pandal-sthapana ki apni vishesh parampara hai; aapke kshetra ki vidhi alag ho to wahi apnayein.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab", value: "Basant Panchami (Magh Shukla panchami). Puja ka sahi muhurat apne shehar ke panchang se dekhein; aam taur par poorvahna (subah se dopahar se pehle) ka samay prachlit hai." },
+  { label: "Rang", value: "Peela ya safed vastra aur peele phool prachlit hain." },
+  { label: "Khaas", value: "Kitaabein, kalam aur vadya Maa ke saamne rakhna. Bachchon ka vidyarambh (pehla akshar) is din karne ki parampara hai." },
+  { label: "Kitna samay", value: "Chhoti puja 20-30 minute. Poori vidhi 45-60 minute." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri groups={[
+  { title: "Zaroori", items: [
+    { name: "Maa Saraswati ki murti ya tasveer", qty: "1" },
+    { name: "Chauki aur peela ya safed kapda", qty: "1" },
+    { name: "Kalash ya lota (jal)", qty: "1" },
+    { name: "Diya, ghee, batti, agarbatti", qty: "1 set" },
+    { name: "Akshat, roli, chandan, haldi", qty: "thoda" },
+    { name: "Peele ya safed phool, phool-mala", qty: "yathashakti" },
+  ]},
+  { title: "Vidya ke upkaran", items: [
+    { name: "Kitaabein, copy, kalam", qty: "yathashakti", note: "Puja ke samay Maa ke saamne rakhein." },
+    { name: "Vadya (veena, harmonium, tabla aadi) jo ghar mein ho", qty: "jo ho" },
+  ]},
+  { title: "Bhog", items: [
+    { name: "Peeli mithai (kesari bhaat, boondi ke laddu, kheer)", qty: "yathashakti", note: "Peele rang ka bhog prachlit hai." },
+    { name: "Fal, ber, gajar jaise mausami fal", qty: "yathashakti", note: "Kshetra ke hisaab se alag." },
+  ]},
+  { title: "Baaki", items: [
+    { name: "Kapoor aur aarti ki thali", qty: "1" },
+    { name: "Dakshina", qty: "yathashakti" },
+  ]},
+]} />
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Snan aur taiyari">
+    Subah snan karke saaf (aksar peele ya safed) kapde pahnein. Chauki par kapda bichayein aur Maa ko virajman karein. Kitaabein aur vadya saaf karke chauki ke paas rakhein.
+  </Step>
+  <Step title="Sankalp">
+    Hath mein jal, akshat aur phool lekar sankalp lein: "Main Maa Saraswati ki puja vidya aur buddhi ki prarthana ke saath shraddha se kar raha/rahi hoon." Sankalp ki vidhi [yahan](/puja-basics/puja-sankalp-kaise-lein) dekh sakte hain.
+  </Step>
+  <Step title="Dhyan aur stuti">
+    Maa Saraswati ka dhyan karein. Prasiddh stuti shlok:
+    <Mantra dev={`या कुन्देन्दुतुषारहारधवला या शुभ्रवस्त्रावृता
+या वीणावरदण्डमण्डितकरा या श्वेतपद्मासना ।
+या ब्रह्माच्युतशङ्करप्रभृतिभिर्देवैः सदा वन्दिता
+सा मां पातु सरस्वती भगवती निःशेषजाड्यापहा ॥`} rom={`Ya Kundendu-tushara-hara-dhavala ya shubhra-vastravrita
+Ya veena-vara-danda-mandita-kara ya shweta-padmasana
+Ya Brahmachyuta-Shankara-prabhritibhir devaih sada vandita
+Sa mam patu Saraswati Bhagavati nihshesha-jadyapaha`} arth="Jo kunda ke phool, chandrama aur himkan ke haar jaisi shwet hain, shubhra vastra pahne hain, jinke hath veena aur vardan se sushobhit hain, jo shwet kamal par virajti hain, jinki Brahma, Vishnu aur Shankar jaise devta sada vandana karte hain, wo sampoorn jadta (agyan) ko harne waali Bhagwati Saraswati meri raksha karein." />
+  </Step>
+  <Step title="Aavahan, snan aur shringar">
+    Maa ko aasan arpit karke jal se snan karayein. Haldi, roli, chandan lagayein, peele ya safed vastra aur phool-mala chadhayein.
+  </Step>
+  <Step title="Puja">
+    Dhoop, deep dikhayein. Kitaabon aur vadya par bhi roli aur akshat lagayein. Saraswati Vandana ka path karein.
+    <Mantra dev={`सरस्वति नमस्तुभ्यं वरदे कामरूपिणि ।
+विद्यारम्भं करिष्यामि सिद्धिर्भवतु मे सदा ॥`} rom={`Saraswati namastubhyam varade kamarupini
+Vidyarambham karishyami siddhir bhavatu me sada`} arth="He varadayini, icchha anusaar roop dharan karne waali Saraswati, aapko namaskar. Main vidya ka aarambh karta/karti hoon; meri vidya mein safalta ho." />
+  </Step>
+  <Step title="Bhog aur aarti">
+    Peeli mithai aur fal ka bhog lagayein. Phir aarti karein. Aarti ke bol neeche diye gaye hain.
+  </Step>
+  <Step title="Prasad aur vidyarambh">
+    Prasad baantein. Chhote bachchon ka vidyarambh (pehle akshar likhwana, kuch kshetron mein "akshar-abhyas" ya "hathe-khadi") is din karne ki parampara hai. Kitaabein puja ke baad hi uthakar padhai shuru karein, aisi bhi prachlit parampara hai.
+  </Step>
 </Steps>
+
+## Saraswati aarti (shuruaati pad)
+
+Neeche aarti ke shuruaati do pad prachlit roop mein diye gaye hain. Poori aarti kisi chhapi pustak ya mandir ki pothi se padhein; hum verified poora paath reviewer ki proofing ke baad jodenge.
+
+<AartiLyrics>
+  <Verse dev={`जय सरस्वती माता, मैया जय सरस्वती माता ।
+सद्गुण वैभव शालिनि, त्रिभुवन विख्याता ॥`} rom={`Jai Saraswati Mata, Maiya jai Saraswati Mata
+Sadgun vaibhav shalini, tribhuvan vikhyata`}><Arth>Maa Saraswati ki jai ho, jo sadgunon ke vaibhav se sampann aur teeno lokon mein prasiddh hain.</Arth></Verse>
+  <Verse dev={`चन्द्रवदनि पद्मासिनि, द्युति मंगलकारी ।
+सोहे शुभ हंस सवारी, अतुल तेजधारी ॥`} rom={`Chandravadani Padmasini, dyuti mangalkari
+Sohe shubh hans sawari, atul tejdhari`}><Arth>Maa ka mukh chandrama jaisa hai, wo kamal par virajti hain, unki aabha mangal karne waali hai. Hans unki sawari hai aur wo apaar tej dharan karti hain.</Arth></Verse>
+</AartiLyrics>
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- **Date ki jaanch:** Panchami tithi kabhi do dino mein padti hai. Puja ka din aur muhurat panchang se dekhein.
+- **Kitaabon ka sammaan:** Puja ke din kitaabon aur kalam ko Maa ke saamne rakhne ka bhaav vidya ke prati sammaan hai. Inhe pair se na lagayein.
+- **Saral samagri:** Mehngi samagri zaroori nahi. Peele phool, jal aur shraddha se puja poori maani jaati hai.
+- **Kshetriya antar:** Bengal mein Saraswati puja ek bada utsav hai aur murti-sthapana aur visarjan ki parampara hai. Ghar ki puja mein tasveer se bhi puja ho sakti hai.
+- **Bachchon ko shamil karein:** Bachche apni kitaabein khud saja sakte hain, isse unmein padhai ke prati lagaav banta hai. Parinaam ki guarantee nahi di jaati.
 
 ## Mahatva aur katha
 
-TODO: short significance, only if relevant
+Saraswati ko Vedon mein vani aur nadi devi ke roop mein jaana jaata hai. Puranik parampara mein unhe Brahma ki shakti aur vidya ki adhishthatri maana gaya hai. Basant Panchami ko Basant ritu ke aagman ka din bhi maana jaata hai; peele rang ka sambandh sarson ke phoolon aur kheton se bhi joda jaata hai. Alag-alag granthon mein Saraswati ke prakat hone ki kathaon mein antar milta hai, isliye hum yahan kisi ek katha ko antim roop mein nahi rakhte. Ganesh ji ki puja ka kram [Ganesh puja vidhi](/ganesh-ji/ganesh-puja-vidhi) mein dekh sakte hain, kyunki kai ghar mein Saraswati puja se pehle Ganesh ji ka smaran hota hai.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Saraswati puja kab hoti hai?">Prachlit roop mein Basant Panchami (Magh Shukla panchami) ko. Sahi date aur muhurat ke liye apne shehar ka panchang dekhein.</Q>
+  <Q q="Saraswati puja mein peele rang ka kya mahatva hai?">Peela rang Basant ritu aur sarson ke phoolon se jodkar dekha jaata hai aur Basant Panchami par peele vastra aur peele bhog ki parampara hai. Yeh parampara hai, koi anivarya shart nahi.</Q>
+  <Q q="Kya kitaabein puja mein rakhni chahiye?">Haan. Vidyarthi aur shikshak kitaabein, kalam aur vadya Maa ke saamne rakhte hain. Puja ke baad unhe sammaan se uthakar upyog karein.</Q>
+  <Q q="Bachchon ka vidyarambh is din kar sakte hain?">Haan, Basant Panchami par vidyarambh karne ki prachlit parampara hai. Kuch kshetron mein iske apne sanskar-roop hote hain; apne pandit ji se poochh sakte hain.</Q>
+  <Q q="Kya puja se pariksha mein safalta ki guarantee hoti hai?">Nahi. Puja shraddha aur vidya ke prati sammaan ka tareeka hai. Is site par kisi parinaam ka vaada nahi kiya jaata; padhai aur mehnat zaroori hai.</Q>
 </FAQ>

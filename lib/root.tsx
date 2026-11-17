@@ -15,9 +15,10 @@ export const rootMetadata: Metadata = {
 };
 
 export const rootViewport: Viewport = {
-  themeColor: [{ media: "(prefers-color-scheme: light)", color: "#FFF8EC" }, { media: "(prefers-color-scheme: dark)", color: "#1A0F0A" }],
+  themeColor: [{ media: "(prefers-color-scheme: light)", color: "#FFFFFF" }, { media: "(prefers-color-scheme: dark)", color: "#1A0F0A" }],
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 /** Shared by both root layouts: <html lang> differs per language tree (en-IN vs hi-IN). */

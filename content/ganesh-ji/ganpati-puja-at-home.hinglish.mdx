@@ -11,35 +11,111 @@ updated: "2026-11-17"
 priority: "P2"
 related: []
 volume: 5000
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: ganpati puja at home. Volume bucket: 5000. */}
+Ghar par Ganpati puja ke liye na bade anushthan ki zaroorat hai, na bahut saman ki. Saaf man, saaf jagah aur kuchh buniyadi samagri se puja ho sakti hai. Yeh page ghar ke liye ek **saral, 10 step ki vidhi** deta hai. Parivar ya kshetra ki alag parampara ho to wahi apnayein. Poori aur vistrit vidhi ke liye [Ganesh puja vidhi](/ganesh-ji/ganesh-puja-vidhi) dekhein.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab", value: "Subah snaan ke baad. Budhvar aur Chaturthi par vishesh maana jaata hai. Tyohaar ka muhurat panchang se." },
+  { label: "Kitna samay", value: "Saral puja 20-30 minute." },
+  { label: "Kya chahiye", value: "Murti ya tasveer, jal, diya, akshat, durva, laal phool, modak ya laddu, aarti ki thali." },
+  { label: "Munh", value: "Aam taur par purv ya uttar ki taraf munh karke baithein." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri id="ganpati-puja-home" groups={[
+  { title: "Zaroori", items: [
+    { name: "Ganesh ji ki murti ya tasveer", qty: "1" },
+    { name: "Chowki aur saaf kapda", qty: "1" },
+    { name: "Jal ka lota", qty: "1" },
+    { name: "Diya, ghee ya tel, batti", qty: "1" },
+    { name: "Agarbatti, dhoop", qty: "1 packet" },
+    { name: "Akshat", qty: "1 katori" },
+    { name: "Roli ya kumkum, chandan", qty: "thoda" },
+  ]},
+  { title: "Chadhane ke liye", items: [
+    { name: "Durva", qty: "21 gaanth", note: "Na mile to jitni mile." },
+    { name: "Laal phool", qty: "5-7" },
+    { name: "Modak, laddu ya mithai", qty: "5 ya 11" },
+    { name: "Phal", qty: "1-2" },
+    { name: "Kapoor aur aarti ki thali", qty: "1" },
+  ]},
+]} />
+
+Zyada vistrit samagri ke liye [Ganesh pujan samagri list](/ganesh-ji/ganesh-pujan-samagri-list) dekhein.
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Taiyari aur shuddhta">
+    Snaan karke saaf kapde pehnein. Puja ki jagah saaf karke chowki par kapda bichayein aur Ganesh ji ko virajman karein. Diya, phool aur bhog saamne rakh lein.
+  </Step>
+  <Step title="Aachman">
+    Daayein haath mein jal lekar teen baar aachman karein.
+    <Mantra dev={`ॐ केशवाय नमः ।
+ॐ नारायणाय नमः ।
+ॐ माधवाय नमः ।`} rom={`Om Keshavaya namah
+Om Narayanaya namah
+Om Madhavaya namah`} arth="Bhagwan Vishnu ke teen naam lekar jal grahan karna shuddhi ka prarambh maana jaata hai." />
+  </Step>
+  <Step title="Dhyan">
+    Haath jodkar Ganesh ji ka dhyan karein.
+    <Mantra dev={`शुक्लाम्बरधरं विष्णुं शशिवर्णं चतुर्भुजम् ।
+प्रसन्नवदनं ध्यायेत् सर्वविघ्नोपशान्तये ॥`} rom={`Shuklambaradharam Vishnum shashivarnam chaturbhujam
+Prasannavadanam dhyayet sarvavighnopashantaye`} arth="Shwet vastra dharan karne wale, chaar bhujaon wale, prasann mukh Ganesh ji ka vighna shanti ke liye dhyan karein." />
+  </Step>
+  <Step title="Diya aur sankalp">
+    Diya jalayein. Haath mein jal, akshat aur phool lekar apna naam, sthaan aur puja ka uddeshya bolein. Saral roop mein: "Main Shri Ganesh ji ki puja shraddha se kar raha/rahi hoon, meri puja sweekar karein." Jal zameen par chhod dein.
+  </Step>
+  <Step title="Avahan aur snaan">
+    <Mantra dev="ॐ गं गणपतये नमः" rom="Om Gan Ganapataye namah" arth="Ganapati ji ko namaskar." />
+    Yeh mantra bolkar Ganesh ji ka avahan karein. Phir thode jal se snaan karayein aur saaf kapde se poochhein. Tasveer ho to jal ke chheente de dein.
+  </Step>
+  <Step title="Tilak, vastra aur sindoor">
+    Chandan ya roli ka tilak lagayein. Vastra ya mauli arpit karein. Ganesh ji ko sindoor lagana prachlit hai.
+  </Step>
+  <Step title="Durva aur phool">
+    Durva ki gaanthein ek-ek karke arpit karein aur har baar "Om Gan Ganapataye namah" bolein. Laal phool aur haar chadhayein.
+  </Step>
+  <Step title="Dhoop, deep aur bhog">
+    Dhoop aur agarbatti dikhayein. Modak ya laddu ka bhog lagayein aur saath mein jal rakhein.
+  </Step>
+  <Step title="Aarti">
+    [Ganesh ji ki aarti](/ganesh-ji/ganesh-ji-ki-aarti) gayein. Ghanti bajayein, thali ghumayein aur aarti lein. Maharashtra ki parampara mein [Sukhkarta Dukhharta](/ganesh-ji/ganpati-aarti-sukhkarta-dukhharta) bhi gayi jaati hai.
+  </Step>
+  <Step title="Pradakshina aur kshama">
+    Apni jagah par teen baar ghoom kar pradakshina karein. Phir kshama prarthana karein.
+    <Mantra dev={`आवाहनं न जानामि न जानामि विसर्जनम् ।
+पूजां चैव न जानामि क्षमस्व परमेश्वर ॥`} rom={`Aavahanam na jaanami na jaanami visarjanam
+Poojam chaiva na jaanami kshamasva Parameshwar`} arth="Main na avahan jaanta hoon, na visarjan, na puja ki vidhi. Mujhse jo bhool hui ho, use kshama karein." />
+    Prasad baant dein.
+  </Step>
 </Steps>
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- **Jaldbaazi na karein:** Chhoti puja bhi shant man se karein. Mobile silent rakhein.
+- **Tulsi:** Prachlit parampara mein Ganesh ji ko tulsi nahi chadhate. Durva aur laal phool chadhayein.
+- **Samagri ki fikr:** Kuch na ho to jal, akshat aur phool se bhi shraddha se puja poori maani jaati hai.
+- **Bhog:** Taaza aur saaf bhog lagayein, aur baad mein prasad ke roop mein baant dein.
+- **Shabd ki shuddhta:** Mantra ka uchcharan dhyan se karein. Na aaye to "Om Gan Ganapataye namah" jaise saral mantra se hi puja karein.
+- **Parampara:** Alag kul mein alag tareeke hote hain. Pandit ji ya bade-buzurgon ki salah lein.
 
 ## Mahatva aur katha
 
-TODO: short significance, only if relevant
+Ganesh ji ko Vighnaharta aur Pratham Pujya kaha jaata hai. Isiliye koi bhi naya kaam shuru karne se pehle unhe yaad karne ki parampara hai. Ghar par ki gayi saral puja bhi isi bhav se ki jaati hai: man mein shraddha, kaam mein sahayata ki prarthana. Roz ki chhoti puja ke liye [daily Ganesh puja](/ganesh-ji/daily-ganesh-puja-at-home) dekhein.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Kya ghar par Ganpati puja bina pandit ji ke kar sakte hain?">Haan. Shraddha se saral vidhi ke saath ghar par puja ki ja sakti hai. Bade anushthan ya vishesh muhurat par pandit ji ki salah achhi rehti hai.</Q>
+  <Q q="Puja ka sabse acha samay kaunsa hai?">Aam taur par subah snaan ke baad. Tyohaar par madhyahna ka muhurat batate hain, jo panchang se aur apne shehar ke hisaab se dekhein.</Q>
+  <Q q="Kya mantra yaad hona zaroori hai?">Nahi. "Om Gan Ganapataye namah" saral mantra hai. Baki mantra dekhkar bhi padh sakte hain.</Q>
+  <Q q="Ganpati ko kya chadhayein?">Durva, laal phool, sindoor, modak ya laddu. Tulsi nahi chadhayi jaati.</Q>
+  <Q q="Murti ho to tasveer ki puja chalegi?">Haan. Tasveer ya chhoti murti, dono se puja shraddha se ki ja sakti hai.</Q>
 </FAQ>

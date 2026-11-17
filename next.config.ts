@@ -4,7 +4,7 @@ import redirects from "./data/redirects.json";
 const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
-  experimental: { inlineCss: true },
+  experimental: { inlineCss: true, globalNotFound: true },
   images: { formats: ["image/avif", "image/webp"] },
   // 301 every cannibalising variant to its canonical page, in both languages (plan section 3).
   async redirects() {

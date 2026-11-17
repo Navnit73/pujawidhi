@@ -11,35 +11,112 @@ updated: "2026-11-17"
 priority: "P4"
 related: []
 volume: 50
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: navratri puja path. Volume bucket: 50. */}
+Navratri ka matlab hai "nau raatein". In nau dinon mein Maa Durga ke nau roopon ki puja ki jaati hai. Saal mein do prasiddh Navratri aati hain: **Chaitra Navratri** (basant ritu mein) aur **Sharadiya Navratri** (Ashwin maas mein, jise sabse badi Navratri maana jaata hai). Iske alawa Magh aur Ashadh maas ki **Gupt Navratri** bhi hoti hai. Yeh page ghar ke liye 9 din ka ek saral aur vyavasthit plan deta hai. Parampara aur kshetra ke hisaab se tareeke badalte hain, isliye jo aapke parivar mein chalta hai, wahi follow karein. Yahan **prachlit roop** diya gaya hai.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab shuru", value: "Navratri ki Pratipada tithi par kalash sthapana ke saath. Tithi aur muhurat apne shehar ke panchang se dekhein." },
+  { label: "Roz ka samay", value: "Subah ki puja 30-45 minute, shaam ki aarti 15 minute. Path ke saath zyada samay lag sakta hai." },
+  { label: "Kya chahiye", value: "Devi ki murti ya tasveer, kalash, jau, diya, laal chunri, phool, naivedya. Poori list neeche hai." },
+  { label: "9 din ka kram", value: "Pratipada par sthapana, roz ek roop ki puja, Ashtami ya Navami par kanya pujan, ant mein visarjan ya parana." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri groups={[
+  { title: "Sthapana ke liye", items: [
+    { name: "Kalash (mitti, tamba ya peetal)", qty: "1" },
+    { name: "Jau (barley) aur saaf mitti", qty: "yathashakti", note: "Jau boye jaate hain. Vistar ke liye kalash sthapana page dekhein." },
+    { name: "Nariyal, aam ke patte, supari, sikka", qty: "1 set" },
+    { name: "Mauli, roli, akshat", qty: "1 packet" },
+  ]},
+  { title: "Roz ki puja", items: [
+    { name: "Durga ma ki murti ya tasveer", qty: "1" },
+    { name: "Laal chunri aur laal vastra", qty: "1" },
+    { name: "Diya, ghee ya tel, batti, kapoor", qty: "1 set" },
+    { name: "Agarbatti aur dhoop", qty: "1 packet" },
+    { name: "Laal phool (gudhal prachlit)", qty: "roz thode" },
+    { name: "Phal aur mithai ka naivedya", qty: "roz" },
+    { name: "Gangajal ya saaf jal", qty: "thoda" },
+  ]},
+  { title: "Ashtami aur Navami ke liye", items: [
+    { name: "Kanya pujan ka bhojan (halwa, puri, chana)", qty: "kanyaon ki sankhya anusaar" },
+    { name: "Kanyaon ke liye chunri aur chhota upahaar", qty: "yathashakti" },
+    { name: "Havan samagri, ghee, aam ki lakdi", qty: "yadi havan karein" },
+  ]},
+]} />
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Taiyari">
+    Navratri se ek din pehle ghar ki safai karein. Puja ka sthaan (aam taur par ghar ka ishaan kon ya uttar-purv) saaf karke chowki par laal ya peela kapda bichayein. Snaan karke saaf kapde pehnein.
+  </Step>
+  <Step title="Pratipada: kalash sthapana">
+    Pratipada tithi par muhurat dekhkar kalash sthapana karein. Poori vidhi [Navratri kalash sthapana vidhi](/navratri-devi/navratri-kalash-sthapana-vidhi) page par hai. Kalash ke saath Ganesh ji ka smaran pehle karein, kyunki kisi bhi puja mein unki puja pehle hoti hai.
+  </Step>
+  <Step title="Sankalp">
+    Haath mein jal, akshat aur phool lekar apna naam, gotra (agar pata ho), sthaan aur tithi bolte hue sankalp lein. Saral roop: "Main Navratri ke in nau dinon mein Maa Durga ki puja shraddha se karne ka sankalp leta/leti hoon. Meri puja sweekar karein." Phir jal zameen par chhod dein.
+  </Step>
+  <Step title="Devi ka dhyan aur avahan">
+    Haath jodkar Devi ka dhyan karein.
+    <Mantra dev={`सर्वमङ्गलमाङ्गल्ये शिवे सर्वार्थसाधिके ।
+शरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते ॥`} rom={`Sarvamangala-mangalye Shive sarvartha-sadhike
+Sharanye Tryambake Gauri Narayani namostu te`} arth="He sabka mangal karne wali, Shiva, sab prayojan siddh karne wali, sharan dene wali, teen netron wali Gauri Narayani, aapko namaskar hai." />
+    Phir avahan: <Mantra dev="ॐ दुं दुर्गायै नमः, आवाहयामि" rom="Om Dum Durgayai namah, aavahayami" arth="Main Maa Durga ka avahan (aamantran) karta/karti hoon." />
+  </Step>
+  <Step title="Shodashopachar ya saral puja">
+    Devi ko aasan, jal se snaan, chunri, sindoor ya kumkum, akshat, phool, dhoop, deep aur naivedya arpit karein. Har upchar ke saath "Om Dum Durgayai namah" bol sakte hain. Samay kam ho to jal, phool, deep aur bhog se bhi puja shraddha se poori maani jaati hai.
+  </Step>
+  <Step title="Roz ek roop ki puja">
+    Prachlit kram mein pehle din Shailputri, doosre Brahmacharini, teesre Chandraghanta, chouthe Kushmanda, paanchve Skandamata, chhathe Katyayani, saatve Kalaratri, aathve Mahagauri aur nauve din Siddhidatri ki puja hoti hai. Har roop ka vistar [Nau Durga ke 9 roop](/navratri-devi/nau-durga-9-roop) page par hai. Tithi ke ghatne-badhne se kisi saal din ka kram badal sakta hai, isliye panchang dekhein.
+  </Step>
+  <Step title="Akhand ya roz ka jyot">
+    Kai ghar mein nau din tak akhand jyot jalayi jaati hai, to kai ghar mein roz subah-shaam diya jalaya jaata hai. Dono prachlit hain. Akhand jyot rakhein to ghar mein kisi ka rehna aur diye mein ghee ya tel ka dhyan rakhna padta hai. Yeh karna zaroori nahi hai.
+  </Step>
+  <Step title="Path aur jaap">
+    Apni shraddha aur samay ke anusaar [Durga Saptashati](/durga-maa/durga-saptashati-path), [Chandi path](/durga-maa/chandi-path-vidhi), [Durga chalisa](/durga-maa/durga-chalisa) ya sirf Devi ke naam ka jaap karein. Jo log poora path nahi kar paate, woh chhote stotra ya naam jaap se bhi puja karte hain. Navarna mantra is prakar hai.
+    <Mantra dev="ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे" rom="Om Aim Hreem Kleem Chamundaye Vichche" arth="Devi ka prasiddh navarna mantra. Iske jaap ki sankhya aur vidhi apne pandit ji ya guru se poochh lein." />
+  </Step>
+  <Step title="Aarti">
+    Roz puja ke ant mein kapoor ya ghee ki batti se aarti karein. [Durga ji ki aarti](/durga-maa/durga-ji-ki-aarti) ya [Ambe tu hai Jagdambe Kali](/navratri-devi/ambe-tu-hai-jagdambe-kali-aarti) gayein. Aarti lekar prasad baantein.
+  </Step>
+  <Step title="Ashtami ya Navami: kanya pujan">
+    Parampara ke anusaar Ashtami ya Navami par kanya pujan hota hai, jisme chhoti kanyaon ko aadar se bulakar unke pair dhoye jaate hain, tilak lagaya jaata hai aur bhojan karaya jaata hai. Vistar [Kumari puja aur kanya pujan vidhi](/durga-maa/kumari-puja-kanya-pujan-vidhi) mein dekhein. Kai parivar ismein ek balak ko bhi bulate hain.
+  </Step>
+  <Step title="Kshama prarthana aur samapan">
+    Navami ke din kai ghar mein havan hota hai. Ant mein kshama prarthana karein.
+    <Mantra dev={`आवाहनं न जानामि न जानामि विसर्जनम् ।
+पूजां चैव न जानामि क्षमस्व परमेश्वरि ॥`} rom={`Aavahanam na jaanami na jaanami visarjanam
+Poojam chaiva na jaanami kshamasva Parameshwari`} arth="Main na avahan jaanta/jaanti hoon, na visarjan, na puja ki vidhi. Mujhse jo bhool hui ho, use kshama karein." />
+    Dashami par kalash ka jal ghar mein chhidak sakte hain, jau ki hariyali prasad ke roop mein rakhi jaati hai aur Devi ka visarjan ya samapan parivar ki parampara ke anusaar kiya jaata hai.
+  </Step>
 </Steps>
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- **Shuddhta par dhyan, ghabrahat nahi:** Snaan karke saaf kapde pehnein, par chhoti chook se ghabrayein nahi. Shraddha sabse pradhan maani jaati hai.
+- **Alag-alag parampara:** Kuch parivar nau din vrat rakhte hain, kuch sirf pehle aur aakhri din, kuch Ashtami par. Vrat ke niyam [Navratri vrat katha aur niyam](/navratri-devi/navratri-vrat-katha-niyam) page par hain.
+- **Sattvik bhojan:** Navratri mein aam taur par lehsun, pyaaz aur maans-madira se door rehne ki parampara hai. Poori vrat ke dauraan khane ki jaankari [falahar guide](/navratri-devi/navratri-vrat-falahar) mein hai.
+- **Samay ka niyam:** Jo ho sake, roz ek hi samay par puja karein. Jab na ho sake to jab bhi ho shraddha se karein.
+- **Muhurat:** Pratipada ka kalash sthapana muhurat har shehar ke liye alag hota hai. Kisi aur shehar ka samay na dekhein.
 
 ## Mahatva aur katha
 
-TODO: short significance, only if relevant
+Navratri Devi Shakti ki upasna ka parv hai. Devi Mahatmya (Durga Saptashati) mein Devi dwara Mahishasur, Shumbh aur Nishumbh jaise asuron ke vadh ki katha aati hai, jise Navratri mein padha-suna jaata hai. Maanyata hai ki Sharadiya Navratri ke ant mein Dashami ko Vijayadashami manayi jaati hai. Alag-alag kshetron mein Navratri ke alag roop hain: Gujarat mein garba aur dandiya, Bengal mein Durga Puja, Dakshin mein Golu, aur Uttar Bharat mein Ramleela aur kanya pujan. Yeh page vishwas aur parampara ke baare mein jaankari ke liye hai.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Kya Navratri ki puja bina pandit ji ke ghar par ho sakti hai?">Haan. Saral vidhi se shraddha ke saath ghar par puja ho sakti hai. Kalash sthapana ke muhurat ya havan jaise bade anushthan ke liye pandit ji ki salaah achhi rehti hai.</Q>
+  <Q q="Kya nau din vrat rakhna zaroori hai?">Nahi. Vrat apni shraddha, swasthya aur parivar ki parampara ka vishay hai. Kai log sirf puja karte hain ya sirf pehle aur aakhri din vrat rakhte hain.</Q>
+  <Q q="Akhand jyot jalana zaroori hai?">Nahi. Yeh kai parivaron ki parampara hai, anivaarya nahi. Roz subah-shaam ka diya bhi prachlit hai.</Q>
+  <Q q="Agar koi din puja chhoot jaaye to kya karein?">Ghabrayein nahi. Agle din se shraddha se jaari rakhein aur ant mein kshama prarthana karein. Kisi vishesh upaay ke liye apne pandit ji se poochhein.</Q>
+  <Q q="Navratri mein kanya pujan kab karein?">Parampara mein Ashtami ya Navami par karte hain. Parivar ki parampara dekhein aur tithi panchang se jaanchein.</Q>
+  <Q q="Mahilayen mahavari ke dauraan puja kar sakti hain?">Is baare mein alag-alag parivaron aur kshetron ki alag manyataayein hain. Apne parivar ke bade ya pandit ji se poochhein. Hum koi ek niyam nahi thop rahe.</Q>
 </FAQ>

@@ -7,6 +7,7 @@ import type { Lang } from "./schema";
 
 /** <title> <= 60 chars: append the brand only when it fits. */
 export function seoTitle(title: string): string {
+  if (title.includes(SITE_NAME)) return title.length <= 60 ? title : title.slice(0, 59).replace(/\s+\S*$/, "") + "…";
   const withBrand = `${title} | ${SITE_NAME}`;
   if (withBrand.length <= 60) return withBrand;
   if (title.length <= 60) return title;
@@ -49,8 +50,22 @@ function build(lang: Lang, o: { title: string; description: string; category?: s
 export const pageMetadata = (lang: Lang, m: PageMeta) =>
   build(lang, { title: m.title, description: m.description, category: m.category, slug: m.slug, index: isIndexable(m), type: "article" });
 
+/** Hub <title>: category name + what people search for there (aarti, vidhi, chalisa...), in natural Hinglish / Hindi. */
+const HUB_TITLE: Record<CategoryKey, { hinglish: string; hi: string }> = {
+  "durga-maa": { hinglish: "Durga Maa: Aarti, Puja Vidhi, Chandi Path", hi: "दुर्गा माँ: आरती, पूजा विधि, चंडी पाठ" },
+  "navratri-devi": { hinglish: "Navratri: Puja Vidhi, Vrat Niyam, Devi Aarti", hi: "नवरात्रि: पूजा विधि, व्रत नियम, देवी आरती" },
+  "ganesh-ji": { hinglish: "Ganesh Ji: Aarti, Puja Vidhi, Chalisa, Mantra", hi: "गणेश जी: आरती, पूजा विधि, चालीसा, मंत्र" },
+  "shiv-ji": { hinglish: "Shiv Ji: Aarti, Chalisa, Puja Vidhi, Mantra", hi: "शिव जी: आरती, चालीसा, पूजा विधि, मंत्र" },
+  "hanuman-ram": { hinglish: "Hanuman Ji aur Ram Ji: Chalisa, Aarti, Puja Vidhi", hi: "हनुमान जी और राम जी: चालीसा, आरती, पूजा विधि" },
+  "lakshmi-vishnu": { hinglish: "Lakshmi, Vishnu aur Tulsi: Aarti, Puja Vidhi", hi: "लक्ष्मी, विष्णु और तुलसी: आरती, पूजा विधि" },
+  "krishna-radha": { hinglish: "Krishna aur Radha: Aarti, Janmashtami Puja Vidhi", hi: "कृष्ण और राधा: आरती, जन्माष्टमी पूजा विधि" },
+  "other-devi-devta": { hinglish: "Anya Devi-Devta aur Vrat: Aarti, Puja Vidhi", hi: "अन्य देवी-देवता और व्रत: आरती, पूजा विधि" },
+  "surya-shani-navgraha": { hinglish: "Surya, Shani, Navgraha aur Pitru: Puja Vidhi", hi: "सूर्य, शनि, नवग्रह और पितृ: पूजा विधि" },
+  "puja-basics": { hinglish: "Puja Samagri List, Aarti Sangrah aur Puja Tools", hi: "पूजा सामग्री सूची, आरती संग्रह और पूजा टूल" },
+  "local": { hinglish: "Pandal Near Me, Murti aur Local Puja Guide", hi: "पंडाल नियर मी, मूर्ति और स्थानीय पूजा गाइड" },
+};
 export const hubMetadata = (lang: Lang, c: CategoryKey) =>
-  build(lang, { title: CATEGORY_MAP[c].name[lang], description: HUBS[c].description[lang], category: c, index: true });
+  build(lang, { title: HUB_TITLE[c][lang], ogTitle: CATEGORY_MAP[c].name[lang], description: HUBS[c].description[lang], category: c, index: true });
 
 export const simpleMetadata = (lang: Lang, o: { title: string; description: string; slug?: string; index?: boolean }) =>
   build(lang, { title: o.title, description: o.description, slug: o.slug, index: o.index ?? true });
@@ -85,10 +100,23 @@ export function articleLd(lang: Lang, m: PageMeta, crumbs: { name: string; path:
     "@graph": [
       {
         "@type": "Article", headline: m.title, description: m.description, inLanguage: htmlLang(lang), url, mainEntityOfPage: url,
-        dateModified: m.updated, datePublished: m.updated, image: ogImage(lang, m.category, m.slug),
+        dateModified: m.updated, image: ogImage(lang, m.category, m.slug), isAccessibleForFree: true,
+        ...(m.reviewer ? { reviewedBy: { "@type": "Person", name: m.reviewer } } : {}),
         author: { "@id": `${SITE_URL}/#org` }, publisher: { "@id": `${SITE_URL}/#org` },
       },
       breadcrumbLd(crumbs),
+      organizationLd(),
+    ],
+  };
+}
+
+/** Schema for the plain pages (contact, privacy, about, terms). Mirrors the visible title and breadcrumb. */
+export function docLd(lang: Lang, o: { type: "WebPage" | "ContactPage" | "AboutPage"; title: string; description: string; path: string; crumbs: { name: string; path: string }[] }) {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": o.type, "@id": `${absUrl(o.path)}#webpage`, url: absUrl(o.path), name: o.title, description: o.description, inLanguage: htmlLang(lang), isPartOf: { "@id": `${SITE_URL}/#website` }, publisher: { "@id": `${SITE_URL}/#org` } },
+      breadcrumbLd(o.crumbs),
       organizationLd(),
     ],
   };

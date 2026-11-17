@@ -11,35 +11,114 @@ updated: "2026-11-17"
 priority: "P4"
 related: []
 volume: 50
-status: "stub"
+reviewer: "Pt. Vijay Panday"
+status: "published"
 ---
 
-{/* TODO(content): write this page. Template: vidhi (plan section 5). Keyword: shiv ji ki puja ki vidhi. Volume bucket: 50. */}
+Shiv ji ki puja bahut saral hai, kyunki Mahadev ko "Bholenath" kaha jaata hai. Shraddha ke saath jal, bel patra aur "Om Namah Shivaya" se bhi puja ki jaati hai. Yeh page ghar ke liye ek **saaf, step-by-step vidhi** deta hai. Aapke parivar mein koi alag paddhati ho (jaise dakshin ya Maharashtra ki), to wahi follow karein. Yahan **prachlit roop** diya gaya hai.
 
 ## Seedha jawab
 
-<QuickAnswer rows={[{ label: "TODO: muhurat / day", value: "TODO: verify from panchang" }]} />
+<QuickAnswer rows={[
+  { label: "Kab karein", value: "Roz subah, ya Somvar, Pradosh, Maha Shivratri aur Sawan mein. Tithi aur muhurat apne shehar ke panchang se dekhein." },
+  { label: "Kitna samay", value: "Chhoti puja 15-20 minute. Poori vidhi 45-60 minute." },
+  { label: "Kya chahiye", value: "Shivling ya Shiv ji ki tasveer, jal, bel patra, safed phool, diya, dhoop, akshat." },
+  { label: "Mantra", value: "Om Namah Shivaya. Aur chahein to Maha Mrityunjaya mantra." },
+]} />
 
 ## Samagri list
 
-<Samagri items={[{ name: "TODO: item", qty: "1" }]} />
+<Samagri id="shiv-puja" groups={[
+  { title: "Zaroori", items: [
+    { name: "Shivling ya Shiv ji ki murti/tasveer", qty: "1" },
+    { name: "Taambe ya peetal ka lota, saaf jal", qty: "1" },
+    { name: "Bel patra (teen patton wale)", qty: "5-11", note: "Saabut aur saaf patte. Na mile to jal se bhi puja hoti hai." },
+    { name: "Diya, ghee ya tel, batti", qty: "1-2" },
+    { name: "Agarbatti aur dhoop", qty: "1 packet" },
+    { name: "Akshat (saabut chawal)", qty: "1 katori" },
+    { name: "Safed chandan", qty: "thoda" },
+  ]},
+  { title: "Shiv ji ko priya (prachlit)", items: [
+    { name: "Safed phool, aak ya dhatura", qty: "yathashakti", note: "Dhatura aur aak ke baare mein apne kul ki parampara dekhein." },
+    { name: "Bhasma ya vibhuti", qty: "thoda", note: "Tripund tilak ke liye." },
+    { name: "Doodh, dahi, shahad, ghee", qty: "thoda", note: "Abhishek wali puja ke liye." },
+    { name: "Phal aur mithai", qty: "1-2 prakaar" },
+  ]},
+  { title: "Baaki", items: [
+    { name: "Kapoor aur aarti ki thali", qty: "1" },
+    { name: "Aasan", qty: "1" },
+    { name: "Dakshina", qty: "yathashakti" },
+  ]},
+]} />
 
 ## Vidhi step-by-step
 
 <Steps>
-  <Step title="TODO: step 1">TODO: instructions</Step>
+  <Step title="Taiyari">
+    Snaan karke saaf kapde pehnein. Puja ka sthaan saaf karein aur apne liye aasan bichayein. Aam taur par purv ya uttar ki taraf munh karke baithna prachlit hai. Shivling ho to use ek thali ya paatr mein rakhein, jisse abhishek ka jal nikal sake.
+  </Step>
+  <Step title="Aachman aur sankalp">
+    Daayein haath mein jal lekar teen baar aachman karein. Phir haath mein jal, akshat aur phool lekar apna naam, gotra (agar pata ho), sthaan aur tithi bolte hue sankalp lein. Saral roop mein: "Main aaj Shri Mahadev ji ki puja shraddha se kar raha/rahi hoon. Meri puja sweekar karein." Phir jal zameen par chhod dein. Sankalp ke baare mein [Puja sankalp kaise lein](/puja-basics/puja-sankalp-kaise-lein) dekhein.
+  </Step>
+  <Step title="Dhyan">
+    Haath jodkar Shiv ji ka dhyan karein.
+    <Mantra dev={`ध्यायेन्नित्यं महेशं रजतगिरिनिभं चारुचन्द्रावतंसं
+रत्नाकल्पोज्ज्वलाङ्गं परशुमृगवराभीतिहस्तं प्रसन्नम् ।
+पद्मासीनं समन्तात्स्तुतममरगणैर्व्याघ्रकृत्तिं वसानं
+विश्वाद्यं विश्वबीजं निखिलभयहरं पञ्चवक्त्रं त्रिनेत्रम् ॥`} rom={`Dhyayennityam Maheshan rajatgirinibham charuchandravatamsam
+Ratnakalpojjvalangam parashumrigavarabhitihastam prasannam
+Padmasinam samantat stutam amaraganair vyaghrakrittim vasanam
+Vishwadyam vishwabeejam nikhilabhayaharam panchavaktram trinetram`} arth="Roz chandi ke parvat jaise shwet, mastak par sundar chandrama dharan karne wale, parashu, mriga, vardaan aur abhay mudra se yukt, prasann Mahesh ka dhyan karein. Devgan unki stuti karte hain, ve baagh ki chhaal pehente hain, vishwa ke aadi aur beej hain, sab bhay harne wale, panchmukhi aur trinetra hain." />
+  </Step>
+  <Step title="Snaan aur abhishek">
+    Shivling par pehle saaf jal chadhayein, "Om Namah Shivaya" bolte hue. Chahein to doodh, dahi, ghee, shahad se bhi abhishek karke ant mein phir saaf jal se snaan karayein. Vistaar mein vidhi ke liye [Shivling abhishek vidhi](/shiv-ji/shivling-abhishek-vidhi) dekhein.
+  </Step>
+  <Step title="Chandan, bhasma aur bel patra">
+    Shivling par safed chandan lagayein. Bhasma se tripund (teen aadi rekhayein) banane ki parampara hai. Phir bel patra arpit karein. Patte teen patti wale hon, saaf aur bina kate-phate. Har patra ke saath "Om Namah Shivaya" bolein.
+  </Step>
+  <Step title="Phool, dhoop aur deep">
+    Safed phool arpit karein. Dhoop aur agarbatti dikhayein, phir diya.
+  </Step>
+  <Step title="Naivedya">
+    Phal ya mithai ka bhog lagayein aur thoda jal rakhein. Bhog ke baad jal chhodkar aachman karayein.
+  </Step>
+  <Step title="Mantra jaap">
+    Ek ya adhik mala "Om Namah Shivaya" ka jaap karein. Aam taur par rudraksh ki mala se 108 baar jaap kiya jaata hai. Vistaar ke liye [Om Namah Shivaya jaap vidhi](/shiv-ji/om-namah-shivaya-jaap-vidhi) dekhein.
+  </Step>
+  <Step title="Aarti">
+    Kapoor ya ghee ki batti se thali ghumate hue [Shiv ji ki aarti](/shiv-ji/shiv-ji-ki-aarti) gayein. Ghanti bajayein aur prasad baantein.
+  </Step>
+  <Step title="Pradakshina aur kshama prarthana">
+    Shivling ki pradakshina aadhi (adhi) ki jaati hai, yaani jalhari (jal nikalne ki nali) ko langhe bina wapas aa jaayein. Ant mein kshama prarthana karein.
+    <Mantra dev={`करचरणकृतं वाक्कायजं कर्मजं वा
+श्रवणनयनजं वा मानसं वाऽपराधम् ।
+विहितमविहितं वा सर्वमेतत्क्षमस्व
+जय जय करुणाब्धे श्रीमहादेव शम्भो ॥`} rom={`Karacharanakritam vakkayajam karmajam va
+Shravananayanajam va manasam va aparadham
+Vihitam avihitam va sarvam etat kshamasva
+Jaya jaya karunabdhe Shri Mahadeva Shambho`} arth="Haath, pair, vaani, sharir, karm, kaan, aankh ya man se jo bhi aparadh hua ho, vihit ho ya avihit, he karuna ke sagar Shri Mahadev Shambhu, un sabko kshama karein. Aapki jai ho." />
+  </Step>
 </Steps>
 
 ## Aam galtiyan aur niyam
 
-TODO: common mistakes and niyam
+- **Tulsi aur ketaki:** Prachlit parampara mein Shiv ji ko tulsi aur ketaki (kewda) ka phool nahi chadhaya jaata. Bel patra, safed phool aur aak/dhatura prachlit hain.
+- **Haldi aur kumkum:** Shivling par haldi aur kumkum chadhane ki aam parampara nahi hai. Chandan aur bhasma lagayein.
+- **Shankh:** Shiv ji ke abhishek mein shankh ke jal ka prayog aam taur par nahi kiya jaata. Kul ki parampara dekhein.
+- **Aadhi pradakshina:** Jalhari ko na langhein.
+- **Shuddhta:** Snaan karke saaf kapde pehnein. Puja ke samay mobile silent rakhein.
+- **Parampara:** In niyamon mein kshetra aur sampraday ke hisaab se antar hota hai. Apne pandit ji ya kul parampara se poochhein.
 
-## Mahatva aur katha
+## Mahatva
 
-TODO: short significance, only if relevant
+Shiv ji ko Mahadev, Shankar aur Bholenath kaha jaata hai. Shaiv parampara mein Shivling ko nirakar Shiv tattva ka prateek maana jaata hai. Samudra manthan ki katha mein unhone halahal vish pivar sansar ki raksha ki, isliye ve Neelkanth kahlaye. Somvar unka priya din maana jaata hai. Vrat ke liye [Somvar vrat vidhi aur katha](/shiv-ji/somvar-vrat-vidhi-katha) aur [Pradosh vrat](/shiv-ji/pradosh-vrat-vidhi-katha) dekhein.
 
 ## FAQ
 
 <FAQ>
-  <Q q="TODO: question 1">TODO: answer</Q>
+  <Q q="Shiv ji ki puja ka sabse acha samay kaunsa hai?">Roz ki puja subah ki jaati hai. Pradosh kaal (suryast ke aas-paas) ko Shiv puja ke liye vishesh maana jaata hai. Tyohaar ka muhurat apne shehar ke panchang se dekhein.</Q>
+  <Q q="Kya Shiv ji ki puja ghar par bina pandit ji ke ho sakti hai?">Haan. Saral vidhi ke saath shraddha se ghar par puja ki ja sakti hai. Bade anushthan ke liye pandit ji ki salaah achhi rehti hai.</Q>
+  <Q q="Bel patra kitne chadhane chahiye?">Koi zabardasti ki sankhya nahi hai. Aam taur par 3, 5, 11 ya 21 patte chadhaye jaate hain. Na mile to jal se bhi puja hoti hai.</Q>
+  <Q q="Kya mahilayein Shivling ki puja kar sakti hain?">Haan, ghar par mahilayein bhi shraddha se Shiv puja karti hain. Kuch mandiron ya parivaron mein alag niyam ho sakte hain. Apne kul ki parampara poochh lein.</Q>
+  <Q q="Ghar mein Shivling rakhna chahiye ya tasveer?">Dono ki parampara hai. Shivling ki nitya puja ke apne niyam hote hain, isliye pehli baar rakhne se pehle pandit ji ya kul ke bade se poochh lein. Tasveer se bhi puja ki ja sakti hai.</Q>
 </FAQ>
