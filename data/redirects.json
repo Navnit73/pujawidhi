@@ -1,0 +1,12 @@
+{
+  "_comment": "Variant slug -> canonical slug (plan section 3). Every variant 301s in both languages.",
+  "redirects": [
+    { "from": ["durga-mata-ki-aarti","maa-durga-ki-aarti","durga-devi-ki-aarti","maa-ambe-ki-aarti","aarti-durga-maa"], "to": "durga-ji-ki-aarti", "category": "durga-maa" },
+    { "from": ["aarti-ganesh","aarti-ganesh-ji-ki","aarti-ganesh-bhagwan-ki","ganesh-ganesh-ji-ki-aarti","jai-ganesh-aarti","jai-ganesha-jai-ganesha-deva","aarti-shri-ganesh-ji-ki"], "to": "ganesh-ji-ki-aarti", "category": "ganesh-ji" },
+    { "from": ["aarti-ganpati-ji-ki"], "to": "ganpati-aarti-sukhkarta-dukhharta", "category": "ganesh-ji" },
+    { "from": ["ganesh-pooja","ganesh-pujan","ganapati-puja","ganapati-pooja","ganapati-pujan","ganapathi-puja","ganapathi-pooja","ganapathy-puja","vinayagar-pooja"], "to": "ganesh-puja-vidhi", "category": "ganesh-ji" },
+    { "from": ["vinayaka-puja","vinayagar-chaturthi-puja"], "to": "vinayak-puja-vidhi", "category": "ganesh-ji" },
+    { "from": ["durga-festival","pooja-durga","durga-maa-puja","durga-mata-puja"], "to": "durga-puja", "category": "durga-maa" },
+    { "from": ["durga-pandal-near-me","pandal-near-me","durga-puja-near-me"], "to": "durga-puja-pandal-near-me", "category": "durga-maa" }
+  ]
+}

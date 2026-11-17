@@ -1,0 +1,14 @@
+{
+  "_comment": "Fill every `date` (YYYY-MM-DD, IST) from a licensed panchang source. Do not enter dates from memory. The homepage countdown skips entries whose date is null.",
+  "festivals": [
+    { "id": "maha-shivratri", "name": { "hinglish": "Maha Shivratri", "hi": "महाशिवरात्रि" }, "date": null, "path": "/shiv-ji/maha-shivratri-puja-vidhi" },
+    { "id": "ram-navami", "name": { "hinglish": "Ram Navami", "hi": "राम नवमी" }, "date": null, "path": "/hanuman-ram/ram-navami-puja-vidhi" },
+    { "id": "hanuman-jayanti", "name": { "hinglish": "Hanuman Jayanti", "hi": "हनुमान जयंती" }, "date": null, "path": "/hanuman-ram/hanuman-jayanti-puja-vidhi" },
+    { "id": "ganesh-chaturthi", "name": { "hinglish": "Ganesh Chaturthi", "hi": "गणेश चतुर्थी" }, "date": null, "path": "/ganesh-ji/ganesh-chaturthi-puja-vidhi" },
+    { "id": "janmashtami", "name": { "hinglish": "Janmashtami", "hi": "जन्माष्टमी" }, "date": null, "path": "/krishna-radha/janmashtami-puja-vidhi" },
+    { "id": "navratri", "name": { "hinglish": "Navratri", "hi": "नवरात्रि" }, "date": null, "path": "/navratri-devi/navratri-puja-vidhi" },
+    { "id": "durga-puja", "name": { "hinglish": "Durga Puja", "hi": "दुर्गा पूजा" }, "date": null, "path": "/durga-maa/durga-puja" },
+    { "id": "diwali", "name": { "hinglish": "Diwali (Lakshmi Ganesh Puja)", "hi": "दिवाली (लक्ष्मी गणेश पूजा)" }, "date": null, "path": "/lakshmi-vishnu/lakshmi-ganesh-puja-vidhi-diwali" },
+    { "id": "chhath", "name": { "hinglish": "Chhath Puja", "hi": "छठ पूजा" }, "date": null, "path": "/surya-shani-navgraha/chhath-puja-vidhi-4-din" }
+  ]
+}
