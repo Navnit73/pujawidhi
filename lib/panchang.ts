@@ -10,7 +10,7 @@
  *
  * All times are IST (Asia/Kolkata).
  */
-import SunCalc from "suncalc";
+import { getTimes } from "suncalc";
 import { cityByKey, type City } from "./cities";
 
 export const TZ = "Asia/Kolkata";
@@ -40,12 +40,15 @@ export function solarTimes(cityKey: string, date: string): SolarTimes {
   const c: City = cityByKey(cityKey);
   // noon IST of that date -> SunCalc finds that day's sunrise/sunset
   const noonIst = new Date(`${date}T12:00:00+05:30`);
-  const t = SunCalc.getTimes(noonIst, c.lat, c.lon);
+  const t = getTimes(noonIst, c.lat, c.lon);
+  // suncalc returns null only at polar latitudes; fall back to 06:00/18:00 IST so the UI never breaks.
+  const sunrise = t.sunrise ?? new Date(`${date}T06:00:00+05:30`);
+  const sunset = t.sunset ?? new Date(`${date}T18:00:00+05:30`);
   const weekday = istWeekday(date);
   const slot = RAHU_SLOT[weekday];
-  const part = (t.sunset.getTime() - t.sunrise.getTime()) / 8;
-  const rahuStart = new Date(t.sunrise.getTime() + part * (slot - 1));
-  return { sunrise: t.sunrise, sunset: t.sunset, rahuStart, rahuEnd: new Date(rahuStart.getTime() + part), weekday };
+  const part = (sunset.getTime() - sunrise.getTime()) / 8;
+  const rahuStart = new Date(sunrise.getTime() + part * (slot - 1));
+  return { sunrise, sunset, rahuStart, rahuEnd: new Date(rahuStart.getTime() + part), weekday };
 }
 
 export interface ProviderResponse {

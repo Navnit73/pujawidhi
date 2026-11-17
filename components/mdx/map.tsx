@@ -1,7 +1,7 @@
 import React from "react";
 import { slugify } from "@/lib/slug";
 import type { PageMeta } from "@/lib/content";
-import type { Lang } from "@/lib/schema";
+import { REVIEWER_TYPES, type Lang } from "@/lib/schema";
 import { pathFor } from "@/lib/site";
 import { AartiLyrics, Arth, Verse } from "./AartiLyrics";
 import { FAQ, Mantra, MdLink, Q, QuickAnswer, Step, Steps } from "./Basic";
@@ -32,7 +32,7 @@ export function mdxComponents(lang: Lang, page: PageMeta) {
     PanchangTool: () => <PanchangTool lang={lang} />,
     FestivalCalendar: () => <FestivalCalendar lang={lang} />,
     AartiIndex: () => <AartiIndex lang={lang} />,
-    Reviewed: () => <Reviewed lang={lang} reviewer={page.reviewer} updated={page.updated} />,
+    Reviewed: () => <Reviewed lang={lang} reviewer={page.reviewer} updated={page.updated} needsReviewer={REVIEWER_TYPES.includes(page.type)} />,
     ShareWhatsApp: () => <ShareWhatsApp lang={lang} path={path} title={page.title} />,
     RelatedGrid: () => <RelatedGrid lang={lang} page={page} />,
   };

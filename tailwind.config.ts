@@ -18,7 +18,7 @@ const config: Config = {
         line: "var(--border)",
       },
       fontFamily: {
-        heading: ["var(--font-heading)", "Georgia", "serif"],
+        heading: ["var(--font-heading-l)", "var(--font-heading-d)", "Georgia", "serif"],
         body: ["var(--font-latin)", "var(--font-deva)", "system-ui", "sans-serif"],
       },
     },

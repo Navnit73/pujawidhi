@@ -27,14 +27,14 @@ export function Step({ title, children }: { title?: string; children?: React.Rea
   );
 }
 
-/** <Mantra dev rom arth /> : Devanagari + Hinglish + meaning. */
+/** <Mantra dev rom arth /> : Devanagari + Hinglish + meaning. Spans only: MDX often puts it inside a paragraph. */
 export function Mantra({ dev, rom, arth }: { dev: string; rom: string; arth?: string }) {
   return (
-    <figure className="my-3 rounded-2xl border border-line bg-warm p-4">
-      <p lang="hi-IN" className="verse-dev !text-[1.25rem]">{dev}</p>
-      <p lang="en-IN" className="verse-rom mt-1">{rom}</p>
-      {arth && <figcaption className="mt-2 text-sm"><strong>Arth:</strong> {arth}</figcaption>}
-    </figure>
+    <span className="my-3 block rounded-2xl border border-line bg-warm p-4">
+      <span lang="hi-IN" className="verse-dev block !text-[1.25rem]">{dev}</span>
+      <span lang="en-IN" className="verse-rom mt-1 block">{rom}</span>
+      {arth && <span className="mt-2 block text-sm"><strong>Arth:</strong> {arth}</span>}
+    </span>
   );
 }
 

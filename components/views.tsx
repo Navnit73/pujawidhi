@@ -5,7 +5,7 @@ import { HUBS } from "@/lib/hubs";
 import { allPages, pagesInCategory, twinLang, type Page } from "@/lib/content";
 import { articleLd, breadcrumbLd, organizationLd, websiteLd } from "@/lib/seo";
 import { absUrl, pathFor, T } from "@/lib/site";
-import type { Lang } from "@/lib/schema";
+import { REVIEWER_TYPES, type Lang } from "@/lib/schema";
 import { Shell } from "./Shell";
 import { JsonLd } from "./JsonLd";
 import { Breadcrumbs } from "./Breadcrumbs";
@@ -23,6 +23,9 @@ import { readFestivals } from "./mdx/Server";
 import { mdxComponents } from "./mdx/map";
 
 /* ------------------------------------------------------------------ page */
+// MDX note: content is our own repo MDX (reviewed in PRs) and relies on JS-expression props such as dev={`...`},
+// so MDXRemote runs with blockJS:false. blockDangerousJS stays on to reject eval/Function/process access.
+// Never pass user-submitted text to MDXRemote.
 export function PageView({ lang, page }: { lang: Lang; page: Page }) {
   const m = page.meta;
   const t = T[lang];
@@ -42,16 +45,16 @@ export function PageView({ lang, page }: { lang: Lang; page: Page }) {
         <div className="mt-4 grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
           <article>
             <Breadcrumbs items={crumbs} />
-            <p className="eyebrow" style={{ color: cat.accent }}>{cat.name[lang]}</p>
+            <p className="eyebrow flex items-center gap-2"><span aria-hidden className="inline-block h-3 w-3 rounded-full" style={{ background: cat.accent }} />{cat.name[lang]}</p>
             <h1 className="mt-1 font-heading text-3xl leading-tight text-ink md:text-4xl">{m.title}</h1>
-            <div className="mt-3"><Reviewed lang={lang} reviewer={m.reviewer} updated={m.updated} /></div>
+            <div className="mt-3"><Reviewed lang={lang} reviewer={m.reviewer} updated={m.updated} needsReviewer={REVIEWER_TYPES.includes(m.type)} /></div>
             <div className="my-5 hidden flex-wrap gap-3 md:flex no-print">
               <ShareWhatsApp lang={lang} path={path} title={m.title} />
               <PrintButton label={`🖨 ${t.print}`} />
             </div>
             <div className="prose-puja mt-6">
               {showBody ? (
-                <MDXRemote source={page.body} components={mdxComponents(lang, m)} />
+                <MDXRemote source={page.body} components={mdxComponents(lang, m)} options={{ blockJS: false, blockDangerousJS: true }} />
               ) : (
                 <div className="card !bg-warm" role="note">
                   <p className="font-semibold">{t.stubNote}</p>
@@ -107,11 +110,12 @@ export function HubView({ lang, category }: { lang: Lang; category: CategoryKey 
       <div className="mx-auto max-w-6xl px-4 pt-4">
         <Breadcrumbs items={crumbs} />
         <header className="card card-accent !bg-warm" style={{ "--accent": cat.accent } as React.CSSProperties}>
-          <p className="eyebrow" style={{ color: cat.accent }}>{t.hub}</p>
+          <p className="eyebrow flex items-center gap-2"><span aria-hidden className="inline-block h-3 w-3 rounded-full" style={{ background: cat.accent }} />{t.hub}</p>
           <h1 className="mt-1 font-heading text-3xl text-ink md:text-4xl">{cat.name[lang]}</h1>
           <div className="prose-puja mt-4 space-y-3 !max-w-3xl">{paragraphs(hub.intro[lang]).map((p, i) => <p key={i}>{p}</p>)}</div>
         </header>
-        <section aria-label={cat.name[lang]} className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <section aria-labelledby="hub-pages" className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <h2 id="hub-pages" className="sr-only">{cat.name[lang]} · {t.pages}</h2>
           {pages.map((p) => <PageCard key={p.slug} lang={lang} page={p} />)}
         </section>
         <section className="mt-14 border-t border-line pt-8">

@@ -14,7 +14,7 @@ export function Shell({ lang, twinHref, children }: { lang: Lang; twinHref: stri
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-full focus:bg-saffron focus:px-4 focus:py-2 focus:text-on-saffron">{t.skip}</a>
       <header className="no-print border-b border-line bg-bg/95">
         <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
-          <Link href={home} className="flex items-center gap-2 no-underline" aria-label={`${SITE_NAME} ${t.home}`}>
+          <Link href={home} className="flex items-center gap-2 no-underline">
             <span aria-hidden className="grid h-10 w-10 place-items-center rounded-full bg-saffron font-heading text-xl text-on-saffron">ॐ</span>
             <span className="font-heading text-xl text-sindoor">{SITE_NAME}</span>
           </Link>
@@ -23,7 +23,7 @@ export function Shell({ lang, twinHref, children }: { lang: Lang; twinHref: stri
             <Link className="pill !bg-transparent !border-transparent" href={pathFor(lang, "puja-basics", "printable-aarti-sheets")}>{t.print}</Link>
           </nav>
           <div className="ml-auto hidden w-72 md:block"><SearchBox lang={lang} placeholder={t.searchPh} label={t.search} /></div>
-          <Link href={twinHref} hrefLang={lang === "hi" ? "en-IN" : "hi-IN"} lang={lang === "hi" ? "en-IN" : "hi-IN"} className="btn btn-ghost ml-auto md:ml-0" >{t.language}</Link>
+          <Link href={twinHref} prefetch={false} hrefLang={lang === "hi" ? "en-IN" : "hi-IN"} lang={lang === "hi" ? "en-IN" : "hi-IN"} className="btn btn-ghost ml-auto md:ml-0" >{t.language}</Link>
           <ThemeToggle label={t.theme} />
         </div>
         <details className="border-t border-line md:hidden">

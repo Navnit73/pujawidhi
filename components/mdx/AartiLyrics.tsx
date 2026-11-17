@@ -20,7 +20,7 @@ export function AartiLyrics({ children, title = "", lang = "hinglish" }: { child
   return (
     <section id="aarti-lyrics" aria-label={title || "Lyrics"} className="not-prose">
       <div className="mb-4 no-print"><ReaderMode verses={verses.map(({ dev, rom }) => ({ dev, rom }))} title={title} lang={lang} /></div>
-      <ol className="space-y-5" data-print-block-lyrics>
+      <ol className="space-y-5">
         {verses.map((v, i) => (
           <li key={i} className="card !p-5">
             <div className="grid gap-3 md:grid-cols-2 md:gap-8">
